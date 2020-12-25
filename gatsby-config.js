@@ -2,8 +2,9 @@ const path = require('path');
 
 module.exports = {
 	siteMetadata: {
-		siteUrl: 'http://localhost/',
-		title: 'denniseitner',
+		title: `Dennis Eitner`,
+		siteUrl: 'https://denniseitner.ch',
+		description: 'Livin la vida loca',
 	},
 	plugins: [
 		'gatsby-plugin-sass',

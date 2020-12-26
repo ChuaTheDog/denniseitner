@@ -39,7 +39,6 @@ exports.createPages = ({ actions, graphql }) => {
 				},
 			});
 		});
-		console.log(posts);
 
 		// Create blog-list pages
 		const postsPerPage = 2;

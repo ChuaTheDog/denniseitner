@@ -15,10 +15,11 @@ export default function Template({
 
 	return (
 		<div>
-			<Header
-				blogtitle={frontmatter.title}
-				featuredImage={frontmatter.featuredImage.publicURL}></Header>
-
+			{frontmatter.featuredImage ? (
+				<Header
+					blogtitle={frontmatter.title}
+					featuredImage={frontmatter.featuredImage.publicURL}></Header>
+			) : null}
 			<Content body={body}></Content>
 
 			{previous === false ? null : (

@@ -10,14 +10,6 @@ module.exports = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-sitemap',
-		'gatsby-plugin-offline',
-		{
-			resolve: 'gatsby-plugin-manifest',
-			options: {
-				icon: 'src/images/icon.png',
-			},
-		},
 
 		{
 			resolve: `gatsby-plugin-mdx`,

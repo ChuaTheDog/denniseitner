@@ -1,8 +1,8 @@
-require('dotenv').config(); // read .env file if present.
-
 const nodemailer = require('nodemailer');
 
 exports.handler = function (event, context, callback) {
+	console.log('contact form api ');
+
 	let transporter = nodemailer.createTransport({
 		host: process.env.MAIL_HOST,
 		port: process.env.MAIL_PORT,

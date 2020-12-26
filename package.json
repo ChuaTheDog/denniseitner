@@ -35,7 +35,6 @@
     "gatsby-transformer-sharp": "^2.9.0",
     "netlify-lambda": "^2.0.2",
     "node-sass": "^4.14.1",
-    "nodemailer": "^6.4.17",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-burger-menu": "^3.0.2",

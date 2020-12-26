@@ -18,11 +18,7 @@ export default function Template({
 			<Header
 				blogtitle={frontmatter.title}
 				featuredImage={frontmatter.featuredImage.publicURL}></Header>
-			{!!frontmatter.featuredImage ? (
-				<div
-					blogtitle={frontmatter.title}
-					featuredImage={frontmatter.featuredImage.publicURL}></div>
-			) : null}
+
 			<Content body={body}></Content>
 
 			{previous === false ? null : (

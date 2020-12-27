@@ -5,7 +5,7 @@ import CardStyles from './card.module.scss';
 const Card = ({ post }) => {
 	console.log(post);
 	return (
-		<div className={CardStyles.card}>
+		<div className={`grid-item {CardStyles.card}`}>
 			<Link to={`/blog/${post.frontmatter.slug}`} className='cardLink'>
 				{!!post.frontmatter.featuredImage ? (
 					<img src={post.frontmatter.featuredImage.publicURL} />

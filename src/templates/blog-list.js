@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
-import styled from 'styled-components';
 
 const blogList = (data) => {
 	const posts = data.data.allMdx.edges;
@@ -20,7 +19,7 @@ const blogList = (data) => {
 
 	return (
 		<div className='container'>
-			<div>{Posts}</div>
+			<div className='grid-layout'>{Posts}</div>
 
 			<nav
 				className='pagination is-centered'

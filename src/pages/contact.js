@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import contactStyles from '../assets/styles/contact.scss';
 
 import ContactForm from '../components/Form/ContactForm/ContactForm';
 
-export default function Contact(props) {
+export default function Contact() {
 	return (
 		<div className='contactBg'>
 			<div className='contactPageContent'>

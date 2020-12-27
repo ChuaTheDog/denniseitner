@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import contactStyles from '../assets/styles/contact.scss';
 
 import ContactForm from '../components/Form/ContactForm/ContactForm';
 
 export default function Contact(props) {
 	return (
-		<div>
+		<div className='contactBg'>
 			<div className='contactPageContent'>
 				<div className='columns'>
 					<div className='column is-half'>

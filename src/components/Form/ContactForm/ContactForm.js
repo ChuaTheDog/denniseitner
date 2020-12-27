@@ -8,10 +8,10 @@ TODO:
 
 import React, { useState } from 'react';
 import { Formik, Field, Form, useFormik } from 'formik';
+import contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Button from '../../Button/Button';
-
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ContactForm = () => {
@@ -27,7 +27,9 @@ const ContactForm = () => {
 			name: Yup.string()
 				.max(25, 'Must be 15 characters or less')
 				.required('Please indicate a name'),
-			email: Yup.string().email('Invalid email address').required('Required'),
+			email: Yup.string()
+				.email('Invalid email address')
+				.required('Please indicate a valid email'),
 			botField: Yup.string().max(1, 'you are not supposed to fikk this out'),
 		}),
 		onSubmit: async (values, e) => {
@@ -50,66 +52,72 @@ const ContactForm = () => {
 	});
 
 	return (
-		<div className='container'>
-			{formSuccess ? (
-				`Thank you ${formik.values.name}. I'll do my best to answer`
-			) : (
-				<form onSubmit={formik.handleSubmit}>
-					<p className='is-hidden'>
-						<label>
-							Don’t fill this out if you’re human: <input name='bot-field' />
-						</label>
-					</p>
-					<div className='field'>
-						<label htmlFor='Name'> Name</label>
-						<input
-							id='name'
-							name='name'
-							type='text'
-							className='input is-rounded'
-							onChange={formik.handleChange}
-							onBlur={formik.handleBlur}
-							value={formik.values.name}
-						/>
-						{formik.touched.name && formik.errors.name ? (
-							<p className='help is-danger'>{formik.errors.name}</p>
-						) : null}
-					</div>{' '}
-					<div className='field'>
-						<label htmlFor='email'>Email</label>
-						<input
-							id='email'
-							name='email'
-							type='email'
-							className='input is-rounded'
-							onChange={formik.handleChange}
-							onBlur={formik.handleBlur}
-							value={formik.values.email}
-						/>
-						{formik.touched.email && formik.errors.email ? (
-							<p className='help is-danger'>{formik.errors.email}</p>
-						) : null}
-					</div>
-					<div className='field'>
-						<label>Message</label>
-						<div className='control'>
-							<textarea
-								name='message'
-								id=''
-								cols='30'
-								rows='10'
-								className='textarea is-rounded'
+		<div>
+			<div className='container'>
+				{formSuccess ? (
+					<h1>Thank you {formik.values.name}, I'll do my best to answer. </h1>
+				) : (
+					<form onSubmit={formik.handleSubmit}>
+						<p className='is-hidden'>
+							<label>
+								Don’t fill this out if you’re human: <input name='bot-field' />
+							</label>
+						</p>
+						<div className='field'>
+							<label htmlFor='Name'> Name</label>
+							<input
+								id='name'
+								name='name'
+								type='text'
+								className='input is-rounded'
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
-								value={formik.values.message}></textarea>
+								value={formik.values.name}
+							/>
+							{formik.touched.name && formik.errors.name ? (
+								<p className={`help yellow ${contactFormStyles.feedback}`}>
+									{formik.errors.name}
+								</p>
+							) : null}
+						</div>{' '}
+						<div className='field'>
+							<label htmlFor='email'>Email</label>
+							<input
+								id='email'
+								name='email'
+								type='email'
+								className='input is-rounded'
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+								value={formik.values.email}
+							/>
+							{formik.touched.email && formik.errors.email ? (
+								<p className={`help yellow ${contactFormStyles.feedback}`}>
+									{formik.errors.email}
+								</p>
+							) : null}
 						</div>
-					</div>
-					<Button type='submit'></Button>
-				</form>
-			)}
-			<GoogleReCaptchaProvider
-				reCaptchaKey={process.env.GOOGLE_RECAPTCHA_KEY}
-				useRecaptchaNet='[optional_boolean_value]'></GoogleReCaptchaProvider>
+						<div className='field'>
+							<label>Message</label>
+							<div className='control'>
+								<textarea
+									name='message'
+									id=''
+									cols='30'
+									rows='10'
+									className={`textarea is-rounded ${contactFormStyles.textarea}`}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+									value={formik.values.message}></textarea>
+							</div>
+						</div>
+						<Button type='submit'></Button>
+					</form>
+				)}
+				<GoogleReCaptchaProvider
+					reCaptchaKey={process.env.GOOGLE_RECAPTCHA_KEY}
+					useRecaptchaNet='[optional_boolean_value]'></GoogleReCaptchaProvider>
+			</div>
 		</div>
 	);
 };

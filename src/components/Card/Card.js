@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import CardStyles from './card.module.scss';
 
 const Card = ({ post }) => {
-	console.log(post);
+	console.log('card component rendered');
 	return (
 		<div className={`grid-item {CardStyles.card}`}>
 			<Link to={`/blog/${post.frontmatter.slug}`} className='cardLink'>

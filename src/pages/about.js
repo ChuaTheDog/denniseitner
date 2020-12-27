@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from '../components/Blog/Header/Header';
+import Header from '../components/Header/Header';
+import Content from '../components/Content/Content';
 
 const AboutPage = () => (
 	<main>
-		<Header></Header>
-		<div className='container'>
-			<h1>About asdfthe Author</h1>
-			<p>Welcome to my Gatsby site.</p>
-		</div>
+		<Header title={'Hello World'}></Header>
+		<Content content={'lorem'}></Content>
 	</main>
 );
 

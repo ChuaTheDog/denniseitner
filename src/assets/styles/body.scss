@@ -3,8 +3,13 @@ html, body {
     padding:0;
     height:100%;
     background-color: #220F61;
-    background: linear-gradient(to bottom right, #9779BE, #58309E,#330D5A, #1E0333 );
-    background-repeat: no-repeat;
+    background: linear-gradient(
+		225deg,
+		rgba(82, 42, 201, 0.69) 0%,
+		rgba(72, 37, 180, 1) 36%,
+		#220f61 100%
+    );
+     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: white; 

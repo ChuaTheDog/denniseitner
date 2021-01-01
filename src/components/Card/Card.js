@@ -9,7 +9,7 @@ const Card = ({ post }) => {
 				{!!post.frontmatter.featuredImage ? (
 					<img src={post.frontmatter.featuredImage.publicURL} />
 				) : null}
-				<div className='cardContent'>
+				<div className={`cardContent ${CardStyles.cardContent}`}>
 					<h1>{post.frontmatter.title}</h1>
 					<p className={CardStyles.cardText}>{post.excerpt}</p>
 				</div>

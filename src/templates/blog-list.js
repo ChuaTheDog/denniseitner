@@ -18,7 +18,6 @@ const blogList = (data) => {
 	return (
 		<div className='container'>
 			<div className='grid-layout'>{Posts}</div>
-
 			<nav
 				className='pagination is-centered'
 				role='navigation'

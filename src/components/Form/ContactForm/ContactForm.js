@@ -74,11 +74,12 @@ const ContactForm = () => {
 								onBlur={formik.handleBlur}
 								value={formik.values.name}
 							/>
-							{formik.touched.name && formik.errors.name ? (
-								<p className={`help yellow ${contactFormStyles.feedback}`}>
-									{formik.errors.name}
-								</p>
-							) : null}
+							<p className={`help yellow ${contactFormStyles.feedback}`}>
+								&nbsp;
+								{formik.touched.name && formik.errors.name
+									? formik.errors.name
+									: null}
+							</p>
 						</div>{' '}
 						<div className='field'>
 							<label htmlFor='email'>Email</label>
@@ -91,13 +92,14 @@ const ContactForm = () => {
 								onBlur={formik.handleBlur}
 								value={formik.values.email}
 							/>
-							{formik.touched.email && formik.errors.email ? (
-								<p className={`help yellow ${contactFormStyles.feedback}`}>
-									{formik.errors.email}
-								</p>
-							) : null}
+							<p className={`help yellow ${contactFormStyles.feedback}`}>
+								&nbsp;
+								{formik.touched.email && formik.errors.email
+									? formik.errors.email
+									: null}
+							</p>
 						</div>
-						<div className='field'>
+						<div className='field mb-4'>
 							<label>Message</label>
 							<div className='control'>
 								<textarea
@@ -111,7 +113,9 @@ const ContactForm = () => {
 									value={formik.values.message}></textarea>
 							</div>
 						</div>
-						<Button type='submit'></Button>
+						<div className={`field ${contactFormStyles.buttonMargin}`}>
+							<Button type='submit'></Button>
+						</div>
 					</form>
 				)}
 				<GoogleReCaptchaProvider

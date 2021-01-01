@@ -4,7 +4,13 @@ import contentStyle from './content.module.scss';
 const Content = (props) => {
 	return (
 		<div className={contentStyle.content}>
-			<div className='container'>{props.content}</div>
+			<div className='container'>
+				<div className='columns'>
+					<div className='column is-half is-offset-one-quarter'>
+						{props.content}
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

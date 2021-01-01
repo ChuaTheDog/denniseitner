@@ -3,14 +3,12 @@ import { Link, graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
 
 const blogList = (data) => {
-	const posts = data.data.allMdx.edges;
 	const { currentPage, numPages } = data.pageContext;
 	const isFirst = currentPage === 1;
 	const isLast = currentPage === numPages;
 	const prevPage =
 		currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString();
 	const nextPage = (currentPage + 1).toString();
-	console.log(posts);
 	const { edges } = data.data.allMdx;
 
 	const Posts = edges

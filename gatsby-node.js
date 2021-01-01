@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
 					fields {
 						slug
 					}
+					excerpt
 					frontmatter {
 						title
 					}
@@ -41,7 +42,7 @@ exports.createPages = ({ actions, graphql }) => {
 		});
 
 		// Create blog-list pages
-		const postsPerPage = 2;
+		const postsPerPage = 12;
 		const numPages = Math.ceil(posts.length / postsPerPage);
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({

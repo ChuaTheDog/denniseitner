@@ -12,10 +12,14 @@ import contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Button from '../../Button/Button';
+import loadingGif from '../../../assets/img/loading.gif';
+import ReactLoading from 'react-loading';
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ContactForm = () => {
 	const [formSuccess, setformSuccess] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -33,6 +37,7 @@ const ContactForm = () => {
 			botField: Yup.string().max(1, 'you are not supposed to fikk this out'),
 		}),
 		onSubmit: async (values, e) => {
+			setLoading(true);
 			await sleep(500);
 			const { name, email, message } = values;
 			const response = await fetch(
@@ -48,6 +53,7 @@ const ContactForm = () => {
 			//alert(JSON.stringify(values, null, 2));
 
 			setformSuccess(true);
+			setLoading(false);
 		},
 	});
 
@@ -114,7 +120,16 @@ const ContactForm = () => {
 							</div>
 						</div>
 						<div className={`field ${contactFormStyles.buttonMargin}`}>
-							<Button type='submit'></Button>
+							{loading ? (
+								<ReactLoading
+									type={'bubbles'}
+									color={'#fff'}
+									height={50}
+									width={50}
+								/>
+							) : (
+								<Button type='submit'></Button>
+							)}
 						</div>
 					</form>
 				)}

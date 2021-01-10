@@ -1,8 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import Header from '../components/Blog/Header/Header';
+import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
+import Header from '../components/Header/Header';
 export default function Template({
 	data,
 	pageContext, // this prop will be injected by the GraphQL query below.
@@ -16,10 +17,12 @@ export default function Template({
 	return (
 		<div>
 			{frontmatter.featuredImage ? (
-				<Header
+				<BlogHeader
 					blogtitle={frontmatter.title}
-					featuredImage={frontmatter.featuredImage.publicURL}></Header>
-			) : null}
+					featuredImage={frontmatter.featuredImage.publicURL}></BlogHeader>
+			) : (
+				<Header title={frontmatter.title}></Header>
+			)}
 			<Content body={body}></Content>
 
 			{previous === false ? null : (

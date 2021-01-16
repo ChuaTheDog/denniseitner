@@ -9,8 +9,8 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sharp',
+		'gatsby-remark-images',
 		'gatsby-plugin-react-helmet',
-
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {

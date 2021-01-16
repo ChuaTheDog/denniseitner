@@ -82,6 +82,11 @@ export const pageQuery = graphql`
 						featuredImage {
 							id
 							publicURL
+							childImageSharp {
+								fluid {
+									...GatsbyImageSharpFluid
+								}
+							}
 						}
 					}
 				}

@@ -5,7 +5,7 @@ const Intro = () => {
 	return (
 		<div className={IntroStyle.intro}>
 			<div className='container'>
-				<h1>
+				<h1 className='intro'>
 					My Name is <span className='yellow'>Dennis</span> and I create digital
 					experiances.
 				</h1>

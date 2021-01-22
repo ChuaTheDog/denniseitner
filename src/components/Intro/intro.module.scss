@@ -1,6 +1,7 @@
+@import '../../../node_modules/sass-mq/mq';
+
 .intro{
-  
-    background-image: linear-gradient(
+      background-image: linear-gradient(
 		225deg,
 		rgba(82, 42, 201, 0.69) 0%,
 		rgba(72, 37, 180, 1) 36%,
@@ -11,12 +12,21 @@
 	padding: 15vw 2rem;
 	display: grid;
 	grid-template-columns: 33vw;
+	@include mq($until: tablet) {
+		max-width: 90vw;
+		grid-template-columns: 90vw;
+		overflow-wrap: normal;
+		h1{
+			font-size: 4rem;
+		}
+	}
 	h1 {
-		font-family: "Montserrat Black";
-		font-size: 50px;
+		font-family: 'Montserrat Black', sans-serif;
+		font-weight: 900; /* black */
+		font-size: 5rem;
+		line-height: 5rem;
 		color: #ffffff;
 		text-align: left;
-		line-height: 60px;
 		margin-bottom: 3rem;
 		span {
 			font-family: Pacifico;

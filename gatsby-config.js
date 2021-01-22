@@ -35,5 +35,8 @@ module.exports = {
 			},
 			__key: 'pages',
 		},
+		{
+			resolve: `gatsby-plugin-preload-fonts`,
+		},
 	],
 };

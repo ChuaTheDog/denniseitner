@@ -8,13 +8,18 @@ html, body {
 		rgba(82, 42, 201, 0.69) 0%,
 		rgba(72, 37, 180, 1) 36%,
 		#220f61 100%
-    );
+    );	
+
      background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: white; 
+  
+    overflow-x: hidden;
 }
-
+body {
+  width:100%;
+}
 
 
 ::selection {

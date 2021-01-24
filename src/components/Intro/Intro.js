@@ -5,16 +5,20 @@ const Intro = () => {
 	return (
 		<div className={IntroStyle.intro}>
 			<div className='container'>
-				<h1 className='intro'>
-					My Name is <span className='yellow'>Dennis</span> and I create digital
-					experiances.
-				</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					mollitia aperiam beatae iste similique impedit, fugit suscipit iure,
-					laboriosam iusto magnam eius excepturi dignissimos omnis quidem, eaque
-					itaque consequatur qui!
-				</p>
+				<div className='columns is-mobile'>
+					<div className='column is-full-mobile is-half-desktop  is-half-fullhd'>
+						<h1 className='intro'>
+							My Name is <span className='yellow'>Dennis</span> and I create
+							digital experiances.
+						</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+							mollitia aperiam beatae iste similique impedit, fugit suscipit
+							iure, laboriosam iusto magnam eius excepturi dignissimos omnis
+							quidem, eaque itaque consequatur qui!
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

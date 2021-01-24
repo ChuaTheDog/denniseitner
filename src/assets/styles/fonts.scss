@@ -6,10 +6,15 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Montserrat";
+    src: 
+         url('../fonts/Montserrat/Montserrat-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+
 
   @font-face {
     font-family: "Montserrat Black";
     src: 
          url('../fonts/Montserrat/Montserrat-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
-     
   }

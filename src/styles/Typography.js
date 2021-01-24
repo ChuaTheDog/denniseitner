@@ -14,6 +14,7 @@ const Typography = createGlobalStyle`
     font-family: Pacifico;
     src: url(${headingFont});
   }
+  
   html {
     font-family: Montserrat;
     color: var(--black);

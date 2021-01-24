@@ -1,29 +1,31 @@
 @import '../../../node_modules/sass-mq/mq';
+/*
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+*/
 
 .intro{
-
-
 	padding: 15vw 2rem;
-	display: grid;
-	grid-template-columns: 33vw;
+	//display: grid;
+	//grid-template-columns: 33vw;
 	overflow: hidden;
 	h1 {
-		font-family: 'Montserrat Black', sans-serif;
-		font-weight: 900; /* black */
-		color: #ffffff;
-		text-align: left;
+	font-family: 'Montserrat Black', sans-serif;
+	font-weight: 900; /* black */
+	color: #ffffff;
+	//	text-align: left;
 		margin-bottom: 3rem;
-		font-size: 5rem;
+	//	font-size: 5rem;
 		span {
 			font-family: Pacifico;
+		
 		}
 	}
 
 
-	@include mq($until: tablet) {
-		grid-template-columns: 90vw;
-		h1{
-			font-size: 2rem;
-		}
-	}
+	
 }

@@ -8,24 +8,43 @@ $mq-breakpoints: (
 );
 */
 
-.intro{
-	padding: 15vw 2rem;
-	//display: grid;
-	//grid-template-columns: 33vw;
-	overflow: hidden;
-	h1 {
-	font-family: 'Montserrat Black', sans-serif;
-	font-weight: 900; /* black */
-	color: #ffffff;
-	//	text-align: left;
-		margin-bottom: 3rem;
-	//	font-size: 5rem;
-		span {
-			font-family: Pacifico;
-		
-		}
+.introWrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;   
+	height: calc(100vh - 2*1.5rem);
+	width: 50vw;
+	@include mq($from: mobile, $until: wide) {
+		width: 100vw;
+		padding-right: 2rem
 	}
+	@include mq( $until: tablet) {
+		width: 100vw;
+		padding-right: 2rem;
+		h1{
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+    }
 
-
+	.intro{
+		h1 {
+			font-family: 'Montserrat Black', sans-serif;
+			font-weight: 900; /* black */
+			color: #ffffff;
+			//	text-align: left;
+				margin-bottom: 3rem;
+			//	font-size: 5rem;
+				span {
+					font-family: Pacifico;
+				}
+			}
+			p{
+				margin-bottom: 5rem;
+			}
+			
+	}
 	
+
 }
+

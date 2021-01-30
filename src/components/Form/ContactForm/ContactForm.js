@@ -61,7 +61,10 @@ const ContactForm = () => {
 		<div>
 			<div className='container'>
 				{formSuccess ? (
-					<h1>Thank you {formik.values.name}, I'll do my best to answer. </h1>
+					<p className={`${contactFormStyles.confirmation}`}>
+						Thank you, <span>{formik.values.name}</span>. I'll do my best to
+						answer as quick as I can.
+					</p>
 				) : (
 					<form onSubmit={formik.handleSubmit}>
 						<p className='is-hidden'>
@@ -69,8 +72,8 @@ const ContactForm = () => {
 								Don’t fill this out if you’re human: <input name='bot-field' />
 							</label>
 						</p>
-						<div className='field'>
-							<label htmlFor='Name'> Name</label>
+						<div className={`field ${contactFormStyles.field}`}>
+							<label htmlFor='Name'>Name*</label>
 							<input
 								id='name'
 								name='name'
@@ -87,8 +90,8 @@ const ContactForm = () => {
 									: null}
 							</p>
 						</div>{' '}
-						<div className='field'>
-							<label htmlFor='email'>Email</label>
+						<div className={`field ${contactFormStyles.field}`}>
+							<label htmlFor='email'>Email*</label>
 							<input
 								id='email'
 								name='email'
@@ -105,8 +108,8 @@ const ContactForm = () => {
 									: null}
 							</p>
 						</div>
-						<div className='field mb-4'>
-							<label>Message</label>
+						<div className={`field ${contactFormStyles.field}`}>
+							<label>Message*</label>
 							<div className='control'>
 								<textarea
 									name='message'

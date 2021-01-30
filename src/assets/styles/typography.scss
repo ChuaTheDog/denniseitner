@@ -1,14 +1,27 @@
 .title, .subtitle{ color: #FFD400; }
+a{
+  color: #FFD400; 
+    font-family: "Montserrat";
+    &:hover{
+      color: #bf1a90
+    }
+}
 a:active, a:focus{
     text-decoration: none;
    outline: #FFD400;
 }
+
 
 h1.intro{
     /* Montserrat Black = 900 */
    // font-weight: 900;
  //   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+.lead{
+  font-size: 1.25rem;
+  font-weight: 700; 
+ }
 
 
 
@@ -62,8 +75,8 @@ html {
     color: $yellow; 
   }
   h1 {
-    font-size: 4.242rem;
-    line-height: 4.77rem;
+    font-size: 3.242rem;
+    line-height: 3.77rem;
    // margin-top: 3rem;
   }
   h2 {

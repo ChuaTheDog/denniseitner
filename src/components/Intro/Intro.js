@@ -8,16 +8,16 @@ const Intro = () => {
 			<div className={IntroStyle.intro}>
 				<h1 className='intro'>
 					My Name is <span className='yellow'>Dennis</span> and I create digital
-					experiances.
+					experiences.
 				</h1>
 				<p>
-					I am a{' '}
+					I am a &nbsp;
 					<b>
 						Product Owner/Manager, UX-Designer, Requirements Engineer, and
 						Frontend Developer.
 					</b>
-					In this order. I write feasible User Stories with testable acceptance
-					criteria, create flowcharts and wireframes.
+					&nbsp; In this order. I write feasible User Stories with testable
+					acceptance criteria, create flowcharts and wireframes.
 				</p>
 				<Link to='/about' className='btn'>
 					Find out more about me.

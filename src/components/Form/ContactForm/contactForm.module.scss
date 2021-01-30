@@ -5,8 +5,32 @@
 
 .feedback{
     font-style: italic;
+    margin-bottom: 0;
+    margin-left: 1rem;
 }
 
 .buttonMargin{
     margin-top: 2rem;
+}
+
+.field{
+   // border: 1px solid red;
+   label{
+     //   border: 1px solid green;
+        margin-left: 1rem;
+   }
+   input, textarea{
+      // margin-top: 0.5rem; 
+   }
+}
+
+
+.confirmation{
+    font-family: 'Montserrat Black', sans-serif;
+    font-weight: 900; /* black */
+    color: #ffffff;
+    span {
+        font-family: Pacifico;
+        color: #ffdd57;
+    }
 }

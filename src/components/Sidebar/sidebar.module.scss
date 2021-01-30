@@ -11,6 +11,13 @@
   position: fixed;
   top: 0; 
   left: 0;
+  a{
+    font-family: Pacifico;
+    color: #fff; 
+    &:hover{
+      color: #bf1a90
+    }
+  }
 }
 .bm-menu-wrap {
   position: fixed;

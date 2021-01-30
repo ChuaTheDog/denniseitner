@@ -38,6 +38,9 @@ export default (props) => {
 			<a className='menu-item' href='/about'>
 				About
 			</a>
+			<a className='menu-item' href='/friends'>
+				Friends
+			</a>
 			<a className='menu-item' href='/blog'>
 				Blog
 			</a>

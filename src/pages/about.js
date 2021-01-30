@@ -8,24 +8,29 @@ const AboutPage = () => (
 		<div className='container'>
 			<div className='columns mt-6'>
 				<div className='column is-half is-offset-one-quarter'>
-					Mit Wireframes und ausgearbeiteten Prototypen visualisiere ich die
-					User Stories, um diese vor der Umsetzung testen zu können. In
-					regelmässigen Kickoffs und Walkthroughs vor den Sprints engagiere mich
-					in agilen Arbeitsprozessen, wodurch ein teamübergreifendes Verständnis
-					der Entwicklungsziele entsteht. Daraus resultiert eine progressive
-					Produktentwicklung. Zu meinen täglichen Aufgaben gehören unter anderem
-					die Entwicklung von Datenmodellen, UML, Flowmaps, Sitemaps, Mockups,
-					Designvorlagen, Informationsarchitektur, Interaction- und
-					Userinterface-Design, Testing, User Stories. Ausserdem tausche ich
-					mich regelmässig mit Business Stakeholders aus und verwalte den
-					Backlog. Meine Leidenschaft ist die Realisation von Ideen und
-					Konzepten. Dabei habe ich eine ausgeprägte unternehmerische und
-					kommerzielle Denkweise. Durch meine Aus-und Weiterbildung decke ich
-					ein breites Spektrum von Disziplinen in der Entwicklung von digitalen
-					Produkten ab. So bin ich in der Lage komplexe technische Sachverhalte
-					rasch zu verstehen. Ich lege grossen Wert darauf Form und Funktion
-					optimal miteinander zu verbinden und dadurch ein aussergewöhnliches
-					und nachhaltiges Erlebnis für die Endnutzer zu schaffen.
+					<p>
+						I create wireframes and prototypes to illustrate the user stories so
+						that they can be tested before implementation. In regular kickoffs
+						and walkthroughs before sprints, I engage in agile work processes to
+						create a shared understanding of development goals across teams.
+						This results in progressive product development.
+					</p>
+					<p>
+						My daily tasks include the development of data models, UML, flow
+						maps, sitemaps, mockups, design templates, information architecture,
+						interaction and user interface design, testing, user stories. I also
+						regularly interact with business stakeholders and manage the
+						backlog.{' '}
+					</p>
+
+					<p>
+						My passion is the realization of ideas and concepts. I have a strong
+						entrepreneurial and commercial mindset. Through my education and
+						training, I cover a wide range of disciplines in the development of
+						digital products. This enables me to quickly understand complex
+						technical issues. I emphasize optimally combining form and function
+						to create an exceptional and lasting experience for the end-user.
+					</p>
 				</div>
 			</div>
 		</div>

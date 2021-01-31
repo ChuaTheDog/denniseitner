@@ -1,6 +1,11 @@
+
+@import '../../../../node_modules/sass-mq/mq';
+
 .header{
-    background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
-	background-position: center;
+ //   background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
+ background-image: linear-gradient(180deg, #BF1A90 0%, #661466 70%, #220F61 100%);
+
+ background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -11,7 +16,11 @@
 	align-items: center;
 	justify-content: center;
 	h1 {
-		font-size: 5rem;
+	//	font-size: 5rem;
 		z-index: 999;
+		text-align: center;
+
 	}
+
+
 }

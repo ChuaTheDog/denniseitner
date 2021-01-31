@@ -1,5 +1,7 @@
 import React from 'react';
 import headerStyles from './header.module.scss';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 const Header = (props) => {
 	return (
 		<div className={headerStyles.header}>

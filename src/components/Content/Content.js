@@ -3,7 +3,7 @@ import contentStyle from './content.module.scss';
 
 const Content = (props) => {
 	return (
-		<div className={contentStyle.content}>
+		<div className={contentStyle.content} id='content'>
 			<div className='container'>
 				<div className='columns'>
 					<div className='column is-half is-offset-one-quarter'>

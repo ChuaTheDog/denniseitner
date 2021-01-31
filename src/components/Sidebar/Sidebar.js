@@ -7,8 +7,8 @@ const styles = {
 		position: 'fixed',
 		width: '36px',
 		height: '30px',
-		left: '36px',
-		top: '36px',
+		left: '18px',
+		top: '18px',
 	},
 	bmBurgerBars: {
 		background: '#fff',
@@ -21,7 +21,7 @@ const styles = {
 		width: '24px',
 	},
 	bmCross: {
-		background: '#bdc3c7',
+		background: '#fff',
 	},
 	bmMenuWrap: {
 		position: 'fixed',

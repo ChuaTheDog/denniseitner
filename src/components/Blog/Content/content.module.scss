@@ -1,5 +1,16 @@
+.contentWrapper{
+    background-image: linear-gradient(1deg, rgb(55, 14, 177) 0%, rgb(49, 10, 167) 28%, #220F61 79%);
+    background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+    margin: -1.5rem;
+
+}
 .content{
+  
     margin: 5rem 0; 
+    border: 1px solid red;
     h1{
       //  font-size: 2.5rem;
         margin-bottom: 0.75rem; 

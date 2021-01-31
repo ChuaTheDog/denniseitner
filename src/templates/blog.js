@@ -4,13 +4,14 @@ import Img from 'gatsby-image';
 import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
 import Header from '../components/Header/Header';
+import ArticleFooter from '../components/Blog/Footer/Footer';
+
 export default function Template({
 	data,
 	pageContext, // this prop will be injected by the GraphQL query below.
 }) {
 	const { frontmatter, body } = data.mdx;
 	const { previous, next } = pageContext;
-	console.log(pageContext);
 	if (previous === null) {
 	}
 
@@ -23,26 +24,10 @@ export default function Template({
 			) : (
 				<Header title={frontmatter.title}></Header>
 			)}
-			<Content body={body}></Content>
-
-			{previous === false ? null : (
-				<>
-					{previous && (
-						<Link to={`/blog${previous.fields.slug}`}>
-							<p>{previous.frontmatter.title}</p>
-						</Link>
-					)}
-				</>
-			)}
-			{next === false ? null : (
-				<>
-					{next && (
-						<Link to={`/blog${next.fields.slug}`}>
-							<p>{next.frontmatter.title}</p>
-						</Link>
-					)}
-				</>
-			)}
+			<div className='contentWrapper'>
+				<Content body={body}></Content>
+				<ArticleFooter previous={previous} next={next}></ArticleFooter>
+			</div>
 		</div>
 	);
 }

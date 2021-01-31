@@ -17,15 +17,15 @@ const styles = {
 		background: '#a90000',
 	},
 	bmCrossButton: {
-		height: '24px',
-		width: '24px',
+		width: '36px',
+		height: '30px',
 	},
 	bmCross: {
 		background: '#fff',
 	},
-	bmMenuWrap: {
-		position: 'fixed',
-		height: '100%',
+	bmMenuWrap: {},
+	bmOverlay: {
+		height: 'auto',
 	},
 };
 

@@ -7,7 +7,7 @@ const Intro = () => {
 		<div className={IntroStyle.introWrapper}>
 			<div className={IntroStyle.intro}>
 				<h1 className='intro'>
-					My Name is <span className='yellow'>Dennis</span> and I create digital
+					My name is <span className='yellow'>Dennis</span> and I create digital
 					experiences.
 				</h1>
 				<p>

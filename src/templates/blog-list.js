@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
-
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
+//import Pagination from '../components/Pagination/Pagination';
+import BootstrapPagination from 'react-bootstrap/Pagination';
+import Pagination from 'react-bootstrap/Pagination';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
 	const isFirst = currentPage === 1;
@@ -10,47 +17,35 @@ const blogList = (data) => {
 		currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString();
 	const nextPage = (currentPage + 1).toString();
 	const { edges } = data.data.allMdx;
-
 	const Posts = edges
 		.filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
 
 	return (
-		<div className='container'>
-			<div className='grid-layout'>{Posts}</div>
-			<nav
-				className='pagination is-centered'
-				role='navigation'
-				aria-label='pagination'>
+		<Container className='pt-3 pb-3'>
+			<Row>
+				<Col>
+					<CardColumns>{Posts}</CardColumns>
+				</Col>
+			</Row>
+			<Pagination>
 				{!isFirst && (
-					<Link
-						to={prevPage}
-						rel='prev'
-						className='pagination-previous has-text-white'>
-						← Previous Page
-					</Link>
+					<Pagination.Item href={prevPage}> ← Previous Page</Pagination.Item>
 				)}
-				<ul className='pagination-list'>
-					{Array.from({ length: numPages }, (_, i) => (
-						<li key={`pagination-number${i + 1}`}>
-							<Link
-								to={`/blog/${i === 0 ? '' : i + 1}`}
-								className='pagination-link has-text-white'>
-								{i + 1}
-							</Link>
-						</li>
-					))}
-				</ul>
+
+				{Array.from({ length: numPages }, (_, i) => (
+					<Pagination.Item
+						key={`pagination-number${i + 1}`}
+						href={`/blog/${i === 0 ? '' : i + 1}`}>
+						{i + 1}
+					</Pagination.Item>
+				))}
+
 				{!isLast && (
-					<Link
-						to={nextPage}
-						rel='next'
-						className='pagination-next has-text-white'>
-						Next Page →
-					</Link>
+					<Pagination.Item href={nextPage}> Next Page →</Pagination.Item>
 				)}
-			</nav>
-		</div>
+			</Pagination>
+		</Container>
 	);
 };
 

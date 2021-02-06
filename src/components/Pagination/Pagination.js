@@ -1,51 +1,27 @@
 import React from 'react';
+import BootstrapPagination from 'react-bootstrap/Pagination';
 import paginationStyles from './pagination.module.scss';
-
+import Row from 'react-bootstrap/Row';
 const Pagination = () => {
 	return (
 		<div>
-			<nav className='pagination' role='navigation' aria-label='pagination'>
-				<a className='pagination-previous'>Previous</a>
-				<a className='pagination-next'>Next page</a>
-				<ul className='pagination-list'>
-					<li>
-						<a
-							className={`pagination-link ${paginationStyles.paginationButton}`}
-							aria-label='Goto page 1'>
-							1
-						</a>
-					</li>
-					<li>
-						<span className='pagination-ellipsis'>&hellip;</span>
-					</li>
-					<li>
-						<a className='pagination-link' aria-label='Goto page 45'>
-							45
-						</a>
-					</li>
-					<li>
-						<a
-							className='pagination-link is-current'
-							aria-label='Page 46'
-							aria-current='page'>
-							46
-						</a>
-					</li>
-					<li>
-						<a className='pagination-link' aria-label='Goto page 47'>
-							47
-						</a>
-					</li>
-					<li>
-						<span className='pagination-ellipsis'>&hellip;</span>
-					</li>
-					<li>
-						<a className='pagination-link' aria-label='Goto page 86'>
-							86
-						</a>
-					</li>
-				</ul>
-			</nav>
+			<BootstrapPagination>
+				<BootstrapPagination.Item>
+					<BootstrapPagination.First />
+					<BootstrapPagination.Prev />
+					<BootstrapPagination.Item>{1}</BootstrapPagination.Item>
+					<BootstrapPagination.Ellipsis />
+					<BootstrapPagination.Item>{10}</BootstrapPagination.Item>
+					<BootstrapPagination.Item>{11}</BootstrapPagination.Item>
+					<BootstrapPagination.Item active>{12}</BootstrapPagination.Item>
+					<BootstrapPagination.Item>{13}</BootstrapPagination.Item>
+					<BootstrapPagination.Item disabled>{14}</BootstrapPagination.Item>
+					<BootstrapPagination.Ellipsis />
+					<BootstrapPagination.Item>{20}</BootstrapPagination.Item>
+					<BootstrapPagination.Next />
+					<BootstrapPagination.Last />
+				</BootstrapPagination.Item>
+			</BootstrapPagination>
 		</div>
 	);
 };

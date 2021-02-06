@@ -1,6 +1,8 @@
 .cardLink{
-    p{
-        color: white; 
+    &:hover{
+        p{
+            color: white; 
+        }
     }
 }
 .card{
@@ -13,11 +15,14 @@
     border-radius: 15px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
   //  overflow: hidden;
+  .card-body{
+    .card-title{
+        font-family: 'Pacifico';
+    }
+  }
 }
 
-.cardText{
-    color: white; 
-}
+
 
 .cardContent{
     padding: 1.5rem 1rem; 

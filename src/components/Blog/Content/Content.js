@@ -5,7 +5,7 @@ import contentStyles from './content.module.scss';
 
 const BlogContent = (props) => {
 	return (
-		<div>
+		<div className='content'>
 			<div className={`container `}>
 				<MDXRenderer>{props.body}</MDXRenderer>
 			</div>

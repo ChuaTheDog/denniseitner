@@ -7,13 +7,13 @@ TODO:
 */
 
 import React, { useState } from 'react';
-import { Formik, Field, Form, useFormik } from 'formik';
+import { Formik, Field, useFormik } from 'formik';
 import contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Button from '../../Button/Button';
-import loadingGif from '../../../assets/img/loading.gif';
 import ReactLoading from 'react-loading';
+import { Form } from 'react-bootstrap';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -36,7 +36,8 @@ const ContactForm = () => {
 				.required('Please indicate a valid email'),
 			botField: Yup.string().max(1, 'you are not supposed to fikk this out'),
 		}),
-		onSubmit: async (values, e) => {
+		onSubmit: async (values, error) => {
+			console.log(error);
 			setLoading(true);
 			await sleep(500);
 			const { name, email, message } = values;
@@ -50,7 +51,7 @@ const ContactForm = () => {
 					body: JSON.stringify({ name, email, message }),
 				}
 			);
-			//alert(JSON.stringify(values, null, 2));
+			//alert(JSON.striiy(values, null, 2));
 
 			setformSuccess(true);
 			setLoading(false);
@@ -67,47 +68,56 @@ const ContactForm = () => {
 					</p>
 				) : (
 					<form onSubmit={formik.handleSubmit}>
-						<p className='is-hidden'>
+						<p className={`${contactFormStyles.hidden}`}>
 							<label>
 								Don’t fill this out if you’re human: <input name='bot-field' />
 							</label>
 						</p>
-						<div className={`field ${contactFormStyles.field}`}>
-							<label htmlFor='Name'>Name*</label>
-							<input
+						<Form.Group>
+							<Form.Label>Name:</Form.Label>
+							<Form.Control
 								id='name'
 								name='name'
 								type='text'
-								className='input is-rounded'
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.name}
+								className={
+									formik.touched.email && formik.errors.email
+										? contactFormStyles.error
+										: null
+								}
 							/>
-							<p className={`help yellow ${contactFormStyles.feedback}`}>
-								&nbsp;
+							<div
+								className={`error-message help yellow ${contactFormStyles.feedback}`}>
 								{formik.touched.name && formik.errors.name
 									? formik.errors.name
 									: null}
-							</p>
-						</div>{' '}
-						<div className={`field ${contactFormStyles.field}`}>
+							</div>
+						</Form.Group>
+						<Form.Group>
 							<label htmlFor='email'>Email*</label>
-							<input
+							<Form.Control
 								id='email'
 								name='email'
 								type='email'
-								className='input is-rounded'
+								className={
+									formik.touched.email && formik.errors.email
+										? contactFormStyles.error
+										: null
+								}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.email}
 							/>
-							<p className={`help yellow ${contactFormStyles.feedback}`}>
+							<div
+								className={`error-message help yellow ${contactFormStyles.feedback}`}>
 								&nbsp;
 								{formik.touched.email && formik.errors.email
 									? formik.errors.email
 									: null}
-							</p>
-						</div>
+							</div>
+						</Form.Group>
 						<div className={`field ${contactFormStyles.field}`}>
 							<label>Message*</label>
 							<div className='control'>
@@ -116,7 +126,8 @@ const ContactForm = () => {
 									id=''
 									cols='30'
 									rows='10'
-									className={`textarea is-rounded ${contactFormStyles.textarea}`}
+									className='form-control'
+									//className={`textarea is-rounded ${contactFormStyles.textarea}`}
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.message}></textarea>
@@ -136,9 +147,6 @@ const ContactForm = () => {
 						</div>
 					</form>
 				)}
-				<GoogleReCaptchaProvider
-					reCaptchaKey={process.env.GOOGLE_RECAPTCHA_KEY}
-					useRecaptchaNet='[optional_boolean_value]'></GoogleReCaptchaProvider>
 			</div>
 		</div>
 	);

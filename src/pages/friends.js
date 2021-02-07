@@ -5,7 +5,7 @@ import Content from '../components/Content/Content';
 const Friends = () => (
 	<main>
 		<Header title={'F.r.i.e.n.d.s.'}></Header>
-		<div className='contentWrapper'>
+		<div className='content'>
 			<div className='container' id='content'>
 				<div className='columns mt-6'>
 					<div className='column is-half is-offset-one-quarter'>

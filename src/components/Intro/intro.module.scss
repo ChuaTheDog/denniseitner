@@ -23,7 +23,7 @@ $mq-breakpoints: (
 	@include mq( $until: tablet) {
 		width: 100vw;
 		padding-right: 2rem;
-		margin-top: 1.5rem;
+		//margin-top: 1.5rem;
 		h1{
 			font-size: 2rem;
 			line-height: 2.25rem;

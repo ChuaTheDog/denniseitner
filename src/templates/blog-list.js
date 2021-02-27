@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import CardDeck from 'react-bootstrap/CardDeck';
 //import Pagination from '../components/Pagination/Pagination';
 import BootstrapPagination from 'react-bootstrap/Pagination';
 import Pagination from 'react-bootstrap/Pagination';

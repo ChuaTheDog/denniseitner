@@ -1,0 +1,10 @@
+@import '../../../node_modules/sass-mq/mq';
+
+.card-columns {
+    @include mq( $from: tablet, $until: desktop) {
+		 column-count: 2;
+    }
+    @include mq( $until: tablet) {
+        column-count: 1;
+   }
+}

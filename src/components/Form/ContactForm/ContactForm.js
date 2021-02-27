@@ -1,6 +1,5 @@
 /*
 TODO: 
-- Include this in contact form
 - remove form after submission
 - prevent multiple submission
 - add honeypot

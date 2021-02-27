@@ -11,10 +11,17 @@
         rgba(0, 0, 0, 0),
         rgba(255, 255, 255, 0.3)
     );
-    backdrop-filter: blur(10px);
+    //backdrop-filter: blur(10px);
     border-radius: 15px;
+    margin-bottom: 4rem;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+
   //  overflow: hidden;
+  img{
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+  }
   .card-body{
     .card-title{
         font-family: 'Pacifico';

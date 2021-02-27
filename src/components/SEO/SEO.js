@@ -1,24 +1,37 @@
-const SEO = ({ title, description, image, article }) => {
-	const { pathname } = useLocation();
-	const { site } = useStaticQuery(query);
+import React from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
-	const {
-		defaultTitle,
-		titleTemplate,
-		defaultDescription,
-		siteUrl,
-		defaultImage,
-		twitterUsername,
-	} = site.siteMetadata;
-
-	const seo = {
-		title: title || defaultTitle,
-		description: description || defaultDescription,
-		image: `${siteUrl}${image || defaultImage}`,
-		url: `${siteUrl}${pathname}`,
-	};
-
-	return null;
-};
+function SEO() {
+	return (
+		<StaticQuery
+			query={graphql`
+				{
+					site {
+						siteMetadata {
+							title
+							description
+							siteUrl
+						}
+					}
+				}
+			`}
+			render={(data) => (
+				<Helmet
+					htmlAttributes={{
+						lang: 'en',
+					}}
+					title={data.site.siteMetadata.title}
+					meta={[
+						{
+							name: 'description',
+							content: data.site.siteMetadata.description,
+						},
+					]}
+				/>
+			)}
+		/>
+	);
+}
 
 export default SEO;

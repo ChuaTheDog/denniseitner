@@ -38,6 +38,5 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-preload-fonts`,
 		},
-		'gatsby-plugin-smoothscroll',
 	],
 };

@@ -29,23 +29,30 @@ const blogList = (data) => {
 					<CardColumns>{Posts}</CardColumns>
 				</Col>
 			</Row>
-			<Pagination>
-				{!isFirst && (
-					<Pagination.Item href={prevPage}> ← Previous Page</Pagination.Item>
-				)}
+			<Row>
+				<Col>
+					<Pagination>
+						{!isFirst && (
+							<Pagination.Item href={prevPage}>
+								{' '}
+								← Previous Page
+							</Pagination.Item>
+						)}
 
-				{Array.from({ length: numPages }, (_, i) => (
-					<Pagination.Item
-						key={`pagination-number${i + 1}`}
-						href={`/blog/${i === 0 ? '' : i + 1}`}>
-						{i + 1}
-					</Pagination.Item>
-				))}
+						{Array.from({ length: numPages }, (_, i) => (
+							<Pagination.Item
+								key={`pagination-number${i + 1}`}
+								href={`/blog/${i === 0 ? '' : i + 1}`}>
+								{i + 1}
+							</Pagination.Item>
+						))}
 
-				{!isLast && (
-					<Pagination.Item href={nextPage}> Next Page →</Pagination.Item>
-				)}
-			</Pagination>
+						{!isLast && (
+							<Pagination.Item href={nextPage}> Next Page →</Pagination.Item>
+						)}
+					</Pagination>
+				</Col>
+			</Row>
 		</Container>
 	);
 };

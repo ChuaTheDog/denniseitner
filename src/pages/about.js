@@ -5,7 +5,7 @@ import Content from '../components/Content/Content';
 const AboutPage = () => (
 	<main>
 		<Header title={'Hello World'}></Header>
-		<div className='content'>
+		<div className='contentWrapper'>
 			<div className='container'>
 				<h2>Hello World. </h2>
 				<p>

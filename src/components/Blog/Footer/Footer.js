@@ -1,18 +1,19 @@
 import React from 'react';
 import FooterStyle from './footer.module.scss';
 import { Link } from 'gatsby';
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
 const Footer = ({ previous, next }) => {
 	return (
-		<div className='container'>
+		<div>
 			<div className={FooterStyle.articleFooter}>
 				{previous === false ? null : (
 					<>
 						{previous && (
 							<Link
 								to={`/blog${previous.fields.slug}`}
-								className={`btn ${FooterStyle.btn}`}>
-								{previous.frontmatter.title}
+								className={`btn  ${FooterStyle.btn}`}>
+								<BsArrowLeft></BsArrowLeft>
 							</Link>
 						)}
 					</>
@@ -23,7 +24,7 @@ const Footer = ({ previous, next }) => {
 							<Link
 								to={`/blog${next.fields.slug}`}
 								className={`btn ${FooterStyle.btn}`}>
-								{next.frontmatter.title}
+								<BsArrowRight></BsArrowRight>
 							</Link>
 						)}
 					</>

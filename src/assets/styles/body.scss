@@ -36,11 +36,11 @@ width: 100vw;
 
   }
 
-  .content{
+  .contentWrapper{
       background-image: linear-gradient(1deg, rgba(82,42,201,0.69) 0%, rgba(72,37,180,1.00) 28%, #220F61 79%);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 5rem 1rem;
+      padding: 5rem 1rem 1rem 1rem;
       margin: 0 -1rem; 
 }

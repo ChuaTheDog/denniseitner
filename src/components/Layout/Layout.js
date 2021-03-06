@@ -4,14 +4,18 @@ import 'normalize.css';
 import '../../assets/styles/styles.scss';
 import Sidebar from '../Sidebar/Sidebar';
 import LayoutStyle from './layout.module.scss';
+import SEO from '../SEO/SEO';
 
 export default function Layout({ children }) {
 	return (
-		<div className={LayoutStyle.layoutWrapper}>
-			<Container fluid>
-				<Sidebar></Sidebar>
-				{children}
-			</Container>
-		</div>
+		<>
+			<SEO></SEO>
+			<div className={LayoutStyle.layoutWrapper}>
+				<Container fluid>
+					<Sidebar></Sidebar>
+					{children}
+				</Container>
+			</div>
+		</>
 	);
 }

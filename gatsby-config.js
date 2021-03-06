@@ -8,6 +8,7 @@ module.exports = {
 	},
 	plugins: [
 		'gatsby-plugin-sass',
+		'gatsby-plugin-preload-fonts',
 		'gatsby-plugin-sharp',
 		'gatsby-remark-images',
 		'gatsby-plugin-react-helmet',

@@ -39,5 +39,18 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-preload-fonts`,
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Dennis Eitner`,
+				short_name: `Dennis Eitner`,
+				start_url: `/`,
+				background_color: `#220F61`,
+				theme_color: `#BF1A90`,
+				display: `standalone`,
+				lang: `en`,
+				icon: `src/assets/images/favicon/favicon.png`, // This path is relative to the root of the site.
+			},
+		},
 	],
 };

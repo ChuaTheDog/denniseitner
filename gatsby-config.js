@@ -49,7 +49,7 @@ module.exports = {
 				theme_color: `#BF1A90`,
 				display: `standalone`,
 				lang: `en`,
-				icon: `src/assets/images/favicon/favicon.png`, // This path is relative to the root of the site.
+				icon: `/src/assets/img/favicon/favicon.png`, // This path is relative to the root of the site.
 			},
 		},
 	],

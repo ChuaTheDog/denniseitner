@@ -43,7 +43,7 @@ const blogList = (data) => {
 							<Pagination.Item
 								key={`pagination-number${i + 1}`}
 								href={`/blog/${i === 0 ? '' : i + 1}`}>
-								{i + 1}
+								<span> {i + 1}</span>
 							</Pagination.Item>
 						))}
 

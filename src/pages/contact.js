@@ -10,14 +10,16 @@ export default function Contact() {
 				<div className='contactPageContent'>
 					<Row>
 						<Col>
-							<ContactForm></ContactForm>
-						</Col>
-						<Col>
 							<h1>Contact me</h1>
 							<p>
 								Feel free to reach out. Drop my a few lines or follow me on
 								linkedIn or Github.
 							</p>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<ContactForm></ContactForm>
 						</Col>
 					</Row>
 				</div>

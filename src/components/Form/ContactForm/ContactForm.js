@@ -59,7 +59,7 @@ const ContactForm = () => {
 
 	return (
 		<div>
-			<div className='container'>
+			<div>
 				{formSuccess ? (
 					<p className={`${contactFormStyles.confirmation}`}>
 						Thank you, <span>{formik.values.name}</span>. I'll do my best to
@@ -72,7 +72,7 @@ const ContactForm = () => {
 								Don’t fill this out if you’re human: <input name='bot-field' />
 							</label>
 						</p>
-						<Form.Group>
+						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
 							<Form.Label>Name:</Form.Label>
 							<Form.Control
 								id='name'
@@ -94,7 +94,7 @@ const ContactForm = () => {
 									: null}
 							</div>
 						</Form.Group>
-						<Form.Group>
+						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
 							<label htmlFor='email'>Email*</label>
 							<Form.Control
 								id='email'
@@ -117,21 +117,23 @@ const ContactForm = () => {
 									: null}
 							</div>
 						</Form.Group>
-						<div className={`field ${contactFormStyles.field}`}>
-							<label>Message*</label>
-							<div className='control'>
-								<textarea
-									name='message'
-									id=''
-									cols='30'
-									rows='10'
-									className='form-control'
-									//className={`textarea is-rounded ${contactFormStyles.textarea}`}
-									onChange={formik.handleChange}
-									onBlur={formik.handleBlur}
-									value={formik.values.message}></textarea>
+						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
+							<div className={`field ${contactFormStyles.field}`}>
+								<label>Message*</label>
+								<div className='control'>
+									<textarea
+										name='message'
+										id=''
+										cols='30'
+										rows='10'
+										className='form-control'
+										//className={`textarea is-rounded ${contactFormStyles.textarea}`}
+										onChange={formik.handleChange}
+										onBlur={formik.handleBlur}
+										value={formik.values.message}></textarea>
+								</div>
 							</div>
-						</div>
+						</Form.Group>
 						<div className={`field ${contactFormStyles.buttonMargin}`}>
 							{loading ? (
 								<ReactLoading

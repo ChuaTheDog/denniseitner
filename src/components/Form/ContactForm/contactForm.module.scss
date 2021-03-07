@@ -13,17 +13,18 @@
     margin-top: 2rem;
 }
 
-.field{
-   // border: 1px solid red;
-   label{
-     //   border: 1px solid green;
-        margin-left: 1rem;
-   }
-   input, textarea{
-      // margin-top: 0.5rem; 
-   }
+
+
+label{
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
 }
 
+
+.customFormGroup{
+    margin-bottom: 1rem;
+   // border: 1px solid red;
+}
 
 .confirmation{
     font-family: 'Montserrat Black', sans-serif;

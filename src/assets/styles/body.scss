@@ -6,8 +6,8 @@ html, body {
     color: white; 
 }
 body {
-  margin: 1px;
- // overflow-x: hidden;
+ margin: 1px;
+ overflow-x: hidden;
  background-image: linear-gradient(
   225deg,
   rgba(82, 42, 201, 0.69) 0%,
@@ -18,8 +18,8 @@ body {
   background-size: 400%;
   background-attachment:fixed;
 	animation: gradient 15s ease infinite;
-height: 100%; 
-width: 100vw; 
+  height: 100%; 
+  width: 100vw; 
   &::after{
  
   }

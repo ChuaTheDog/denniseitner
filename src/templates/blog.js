@@ -5,6 +5,7 @@ import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
 import Header from '../components/Header/Header';
 import ArticleFooter from '../components/Blog/Footer/Footer';
+import { Helmet } from 'react-helmet';
 
 export default function Template({
 	data,
@@ -17,6 +18,9 @@ export default function Template({
 
 	return (
 		<div>
+			<Helmet>
+				<title>{frontmatter.title}</title>
+			</Helmet>
 			{frontmatter.featuredImage ? (
 				<BlogHeader
 					blogtitle={frontmatter.title}

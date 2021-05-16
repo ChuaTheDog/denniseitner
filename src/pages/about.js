@@ -1,9 +1,15 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Content from '../components/Content/Content';
+import { Helmet } from 'react-helmet';
 
 const AboutPage = () => (
 	<main>
+		<Helmet>
+			<meta charSet='utf-8' />
+			<title>My Title</title>
+			<link rel='canonical' href='http://mysite.com/example' />
+		</Helmet>
 		<Header title={'Hello World'}></Header>
 		<div className='contentWrapper'>
 			<div className='container'>

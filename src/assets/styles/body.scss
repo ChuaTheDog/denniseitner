@@ -4,10 +4,10 @@ html, body {
     height:100%;
     width: 100%; 
     color: white; 
+    overflow-x: hidden;
 }
 body {
- margin: 1px;
- overflow-x: hidden;
+  position: relative
  background-image: linear-gradient(
   225deg,
   rgba(82, 42, 201, 0.69) 0%,

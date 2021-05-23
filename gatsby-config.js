@@ -13,7 +13,6 @@ module.exports = {
 				implementation: require('node-sass'),
 			},
 		},
-		'gatsby-plugin-preload-fonts',
 		'gatsby-plugin-sharp',
 		'gatsby-remark-images',
 		'gatsby-plugin-react-helmet',
@@ -41,9 +40,7 @@ module.exports = {
 			},
 			__key: 'pages',
 		},
-		{
-			resolve: `gatsby-plugin-preload-fonts`,
-		},
+
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

@@ -1,3 +1,7 @@
+# Bug: 
+-[ ] Back and forth buttons on blog page do not work
+
+
 # TODO: 
 - [x]  Include React Helmet
 - [x]  Gatsby Images, lazy load

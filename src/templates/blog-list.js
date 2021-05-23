@@ -28,7 +28,7 @@ const blogList = (data) => {
 	};
 
 	return (
-		<Container className='pt-3 pb-3'>
+		<Container>
 			<Row>
 				<Col>
 					<div className='card-columns'>{Posts}</div>

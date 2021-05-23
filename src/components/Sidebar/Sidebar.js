@@ -30,7 +30,7 @@ const styles = {
 		height: 'auto',
 	},
 	bmItem: {
-		padding: '0.5rem',
+		//	padding: '0.5rem',
 	},
 };
 

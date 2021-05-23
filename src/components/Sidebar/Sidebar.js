@@ -1,6 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import sidebarStyles from './sidebar.module.scss';
+import * as sidebarStyles from './sidebar.module.scss';
 
 const styles = {
 	bmBurgerButton: {
@@ -23,9 +23,14 @@ const styles = {
 	bmCross: {
 		background: '#fff',
 	},
-	bmMenuWrap: {},
+	bmMenuWrap: {
+		//	width: '20vw',
+	},
 	bmOverlay: {
 		height: 'auto',
+	},
+	bmItem: {
+		padding: '0.5rem',
 	},
 };
 

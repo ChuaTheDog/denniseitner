@@ -1,10 +1,18 @@
 @import '../../../node_modules/sass-mq/mq';
 
 .card-columns {
+    column-count: 3;
+    column-gap: 1.25rem;
+ 
     @include mq( $from: tablet, $until: desktop) {
 		 column-count: 2;
     }
     @include mq( $until: tablet) {
         column-count: 1;
    }
+}
+
+.card-columns .card {
+    display: inline-block;
+    width: 100%;
 }

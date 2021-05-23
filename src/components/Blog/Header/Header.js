@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderStyle from './header.module.scss';
+import * as HeaderStyle from './header.module.scss';
 
 const Header = ({ blogtitle, featuredImage }) => {
 	const featuredImageBG = featuredImage ? featuredImage : '';

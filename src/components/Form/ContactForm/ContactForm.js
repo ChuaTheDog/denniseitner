@@ -7,7 +7,7 @@ TODO:
 
 import React, { useState } from 'react';
 import { Formik, Field, useFormik } from 'formik';
-import contactFormStyles from './contactForm.module.scss';
+import * as contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Button from '../../Button/Button';

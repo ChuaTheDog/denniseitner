@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
-import CardDeck from 'react-bootstrap/CardDeck';
-//import Pagination from '../components/Pagination/Pagination';
-import BootstrapPagination from 'react-bootstrap/Pagination';
 import Pagination from 'react-bootstrap/Pagination';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import CardColumns from 'react-bootstrap/CardColumns';
+import Masonry from 'react-masonry-css';
+
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
 	const isFirst = currentPage === 1;
@@ -22,11 +20,18 @@ const blogList = (data) => {
 		.filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
 
+	const breakpointColumnsObj = {
+		default: 4,
+		1100: 3,
+		700: 2,
+		500: 1,
+	};
+
 	return (
 		<Container className='pt-3 pb-3'>
 			<Row>
 				<Col>
-					<CardColumns>{Posts}</CardColumns>
+					<div className='card-columns'>{Posts}</div>
 				</Col>
 			</Row>
 			<Row>
@@ -38,7 +43,6 @@ const blogList = (data) => {
 								← Previous Page
 							</Pagination.Item>
 						)}
-
 						{Array.from({ length: numPages }, (_, i) => (
 							<Pagination.Item
 								key={`pagination-number${i + 1}`}
@@ -46,7 +50,6 @@ const blogList = (data) => {
 								<span> {i + 1}</span>
 							</Pagination.Item>
 						))}
-
 						{!isLast && (
 							<Pagination.Item href={nextPage}> Next Page →</Pagination.Item>
 						)}

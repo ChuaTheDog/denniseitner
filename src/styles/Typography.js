@@ -1,13 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
 import bodyFont from '../assets/fonts/Montserrat/Montserrat-Regular.ttf';
-import MonteserratBlack from '../assets/fonts/Montserrat/Montserrat-Black.ttf';
+import BoldFont from '../assets/fonts/Montserrat/Montserrat-Black.ttf';
 import headingFont from '../assets/fonts/Pacifico/Pacifico-Regular.ttf';
 
 const Typography = createGlobalStyle`
   @font-face {
     font-family: Montserrat;
     src: url(${bodyFont});
+  }
+  @font-face {
+    font-family: MonteserratBlack;
+    src: url(${BoldFont});
   }
 
   @font-face {
@@ -47,10 +51,11 @@ const Typography = createGlobalStyle`
     transform: rotate(-2deg);
   }
 
-
   h1, h2, h3, h4, h5, h6{
     color: gold; 
   }
+
+
 `;
 
 export default Typography;

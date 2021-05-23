@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterStyle from './footer.module.scss';
+import * as FooterStyle from './footer.module.scss';
 import { Link } from 'gatsby';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 

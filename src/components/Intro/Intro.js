@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import IntroStyle from './intro.module.scss';
+import * as introStyle from './intro.module.scss';
 
 const Intro = () => {
 	return (
-		<div className={IntroStyle.introWrapper}>
-			<div className={IntroStyle.intro}>
+		<div className={introStyle.introWrapper}>
+			<div className={introStyle.intro}>
 				<h1 className='intro'>
 					My name is <span className='yellow'>Dennis</span> and I create digital
 					experiences.
@@ -20,7 +20,7 @@ const Intro = () => {
 					acceptance criteria, create flowcharts and wireframes.
 				</p>
 				<Link to='/about' className='btn'>
-					Find out more about me.
+					More about me
 				</Link>
 			</div>
 		</div>

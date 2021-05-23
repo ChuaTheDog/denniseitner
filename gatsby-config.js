@@ -7,7 +7,12 @@ module.exports = {
 		description: 'I haz website. Much wow.',
 	},
 	plugins: [
-		'gatsby-plugin-sass',
+		{
+			resolve: `gatsby-plugin-sass`,
+			options: {
+				implementation: require('node-sass'),
+			},
+		},
 		'gatsby-plugin-preload-fonts',
 		'gatsby-plugin-sharp',
 		'gatsby-remark-images',

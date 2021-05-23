@@ -1,7 +1,20 @@
+.btn{
+  border-radius: 1.5rem; 
+   background-image: linear-gradient(221deg, #FDD400 0%, #FFA718 100%);
+   padding: 1rem;
+   width: 100%;
+   border: 0; 
+   color: #363636; 
+   font-size:1rem;
+   font-weight: 400;
+   color: #000
+  
+}
+
 .title, .subtitle{ color: #FFD400; }
 a{
   color: #FFD400; 
-    font-family: "Montserrat";
+ //   font-family: "Montserrat";
     &:hover{
       color: #bf1a90
     }
@@ -126,13 +139,3 @@ html {
 
 
 
-  .btn{
-     border-radius: 1.5rem; 
-      background-image: linear-gradient(221deg, #FDD400 0%, #FFA718 100%);
-      padding: 1rem;
-      width: 100%;
-      border: 0; 
-      color: #363636; 
-      font-family: Pacifico;
-      font-size:1rem;
-  }

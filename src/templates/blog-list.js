@@ -31,7 +31,7 @@ const blogList = (data) => {
 		<Container>
 			<Row>
 				<Col>
-					<div className='card-columns'>{Posts}</div>
+					<div className='card-columns pt-3'>{Posts}</div>
 				</Col>
 			</Row>
 			<Row>

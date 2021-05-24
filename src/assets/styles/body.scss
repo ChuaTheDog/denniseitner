@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-size: 400%;
   background-attachment:fixed;
-	animation: gradient 15s ease infinite;
   height: 100vh; 
   width: 100vw; 
   box-shadow: 0 14px 27px 9px rgba(0,0,0,0.50);
@@ -45,14 +44,3 @@ body {
 }
 
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}

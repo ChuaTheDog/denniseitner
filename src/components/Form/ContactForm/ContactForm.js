@@ -6,10 +6,9 @@ TODO:
 */
 
 import React, { useState } from 'react';
-import { Formik, Field, useFormik } from 'formik';
+import { useFormik } from 'formik';
 import * as contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Button from '../../Button/Button';
 import ReactLoading from 'react-loading';
 import { Form } from 'react-bootstrap';
@@ -50,7 +49,6 @@ const ContactForm = () => {
 					body: JSON.stringify({ name, email, message }),
 				}
 			);
-			//alert(JSON.striiy(values, null, 2));
 
 			setformSuccess(true);
 			setLoading(false);

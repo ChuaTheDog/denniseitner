@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
 import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
 import Header from '../components/Header/Header';
@@ -36,7 +35,7 @@ export default function Template({
 	);
 }
 export const pageQuery = graphql`
-	query($slug: String!) {
+	query ($slug: String!) {
 		mdx(fields: { slug: { eq: $slug } }) {
 			body
 			frontmatter {

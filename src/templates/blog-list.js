@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import PostCard from '../components/Card/Card';
 import Pagination from 'react-bootstrap/Pagination';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import CardColumns from 'react-bootstrap/CardColumns';
-import Masonry from 'react-masonry-css';
 
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
@@ -19,13 +17,6 @@ const blogList = (data) => {
 	const Posts = edges
 		.filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
-
-	const breakpointColumnsObj = {
-		default: 4,
-		1100: 3,
-		700: 2,
-		500: 1,
-	};
 
 	return (
 		<Container>
@@ -64,11 +55,6 @@ export default blogList;
 
 export const pageQuery = graphql`
 	query blogPageQuery($skip: Int!, $limit: Int!) {
-		site {
-			siteMetadata {
-				title
-			}
-		}
 		allMdx(
 			sort: { fields: [frontmatter___date], order: DESC }
 			limit: $limit

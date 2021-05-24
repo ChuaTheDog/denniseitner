@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import * as cardStyles from './card.module.scss';
-import { Image } from 'react-bootstrap';
 import BootstrapCard from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
-import Masonry from 'react-masonry-css';
 
 const MAXLENGTH = 250;
 

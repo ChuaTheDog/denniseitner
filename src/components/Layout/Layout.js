@@ -1,16 +1,15 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import 'normalize.css';
 import '../../assets/styles/styles.scss';
 import Sidebar from '../Sidebar/Sidebar';
-import * as layoutStyle from './layout.module.scss';
-import SEO from '../SEO/SEO';
+import Seo from '../SEO/SEO';
 
 export default function Layout({ children }) {
 	return (
 		<>
-			<SEO></SEO>
-			<div className={layoutStyle.layoutWrapper}>
+			<Seo></Seo>
+			<div>
 				<Container fluid>
 					<Sidebar></Sidebar>
 					{children}

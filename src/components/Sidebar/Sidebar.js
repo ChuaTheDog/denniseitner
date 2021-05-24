@@ -34,7 +34,7 @@ const styles = {
 	},
 };
 
-export default (props) => {
+const Sidebar = (props) => {
 	return (
 		<Menu styles={styles} className={sidebarStyles.sidebar}>
 			<a className='menu-item' href='/'>
@@ -55,3 +55,4 @@ export default (props) => {
 		</Menu>
 	);
 };
+export default Sidebar;

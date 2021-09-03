@@ -4,6 +4,7 @@ import 'normalize.css';
 import '../../assets/styles/styles.scss';
 import Sidebar from '../Sidebar/Sidebar';
 import Seo from '../SEO/SEO';
+import Nav from '../Nav/Nav';
 
 export default function Layout({ children }) {
 	return (
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
 			<Seo></Seo>
 			<div>
 				<Container fluid>
-					<Sidebar></Sidebar>
+					<Nav />
 					{children}
 				</Container>
 			</div>

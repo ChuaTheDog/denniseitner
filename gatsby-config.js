@@ -8,6 +8,20 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			options: {
+				fonts: [
+					{
+						family: `Pacifico`,
+					},
+					{
+						family: `Montserrat`,
+						variants: [`400`, `900`],
+					},
+				],
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
 				implementation: require('node-sass'),
@@ -54,6 +68,7 @@ module.exports = {
 				icon: `src/assets/img/favicon/favicon.png`, // This path is relative to the root of the site.
 			},
 		},
+		'gatsby-plugin-react-svg',
 		'gatsby-plugin-remove-serviceworker',
 	],
 };

@@ -2,25 +2,35 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import * as cardStyles from './card.module.scss';
-import BootstrapCard from 'react-bootstrap/Card';
+import Moment from 'react-moment';
 
 const MAXLENGTH = 250;
 
 const Card = ({ post }) => {
 	return (
-		<Link to={`/blog/${post.frontmatter.slug}`} className={cardStyles.cardLink}>
-			<BootstrapCard className={cardStyles.card}>
+		<div className={cardStyles.cardWrapper}>
+			<div className={cardStyles.cardDate}>
+				<div className={cardStyles.day}>
+					<Moment format='DD'>{post.frontmatter.date}</Moment>
+				</div>
+
+				<div className={cardStyles.month}>
+					<Moment format='MMM'>{post.frontmatter.date}</Moment>
+				</div>
+				<div className={cardStyles.year}>
+					<Moment format='YYYY'>{post.frontmatter.date}</Moment>
+				</div>
+
 				{!!post.frontmatter.featuredImage ? (
 					<Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
 				) : null}
-				<BootstrapCard.Body>
-					<h3>{post.frontmatter.title}</h3>
-					<BootstrapCard.Text>
-						{post.excerpt.substr(0, MAXLENGTH)}
-					</BootstrapCard.Text>
-				</BootstrapCard.Body>
-			</BootstrapCard>
-		</Link>
+			</div>
+			<div className={cardStyles.cardContent}>
+				<h3>{post.frontmatter.title}</h3>
+				<p>{post.excerpt.substr(0, MAXLENGTH)}</p>
+				<Link to={`/blog/${post.frontmatter.slug}`}>read more</Link>
+			</div>
+		</div>
 	);
 };
 

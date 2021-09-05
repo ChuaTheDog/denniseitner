@@ -5,7 +5,9 @@ import Home from '../../assets/svg/Home.svg';
 const Nav = () => {
 	return (
 		<div className={navStyles.navWrapper}>
-			<Home className={navStyles.home}></Home>
+			<a href='/'>
+				<Home className={navStyles.home}></Home>
+			</a>
 			<nav className={navStyles.nav}>
 				<a className={navStyles.navItem} href='/about'>
 					About

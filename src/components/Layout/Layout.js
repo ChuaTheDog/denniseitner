@@ -10,11 +10,9 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Seo></Seo>
+			<Nav />
 			<div>
-				<Container fluid>
-					<Nav />
-					{children}
-				</Container>
+				<Container fluid>{children}</Container>
 			</div>
 		</>
 	);

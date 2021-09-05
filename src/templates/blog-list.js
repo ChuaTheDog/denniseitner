@@ -5,6 +5,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import Header from '../components/Header/Header';
 
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
@@ -19,35 +20,43 @@ const blogList = (data) => {
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
 
 	return (
-		<Container>
-			<Row>
-				<Col>
-					<div className='pt-3'>{Posts}</div>
-				</Col>
-			</Row>
-			<Row>
-				<Col>
-					<Pagination>
-						{!isFirst && (
-							<Pagination.Item href={prevPage}>
-								{' '}
-								← Previous Page
-							</Pagination.Item>
-						)}
-						{Array.from({ length: numPages }, (_, i) => (
-							<Pagination.Item
-								key={`pagination-number${i + 1}`}
-								href={`/blog/${i === 0 ? '' : i + 1}`}>
-								<span> {i + 1}</span>
-							</Pagination.Item>
-						))}
-						{!isLast && (
-							<Pagination.Item href={nextPage}> Next Page →</Pagination.Item>
-						)}
-					</Pagination>
-				</Col>
-			</Row>
-		</Container>
+		<>
+			<Header></Header>
+			<div className='contentWrapper'>
+				<Container>
+					<Row>
+						<Col>
+							<div className='pt-3'>{Posts}</div>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<Pagination>
+								{!isFirst && (
+									<Pagination.Item href={prevPage}>
+										{' '}
+										← Previous Page
+									</Pagination.Item>
+								)}
+								{Array.from({ length: numPages }, (_, i) => (
+									<Pagination.Item
+										key={`pagination-number${i + 1}`}
+										href={`/blog/${i === 0 ? '' : i + 1}`}>
+										<span> {i + 1}</span>
+									</Pagination.Item>
+								))}
+								{!isLast && (
+									<Pagination.Item href={nextPage}>
+										{' '}
+										Next Page →
+									</Pagination.Item>
+								)}
+							</Pagination>
+						</Col>
+					</Row>
+				</Container>
+			</div>
+		</>
 	);
 };
 

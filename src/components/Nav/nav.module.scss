@@ -1,8 +1,11 @@
 .navWrapper {
-	width: 100%;
+	width: 100vw;
 	max-width: 50vw;
 	line-height: 2rem;
 	margin-left: auto;
+	position: fixed;
+	top: 0;
+	z-index: 999;
 }
 
 .home {
@@ -17,7 +20,7 @@ nav {
 	list-style: none;
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-start;
+	width: 100vw;
 }
 .navItem {
 	text-align: center;

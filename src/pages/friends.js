@@ -8,7 +8,7 @@ const Friends = () => (
 			<div className='container' id='content'>
 				<div className='columns mt-6'>
 					<div className='column is-half is-offset-one-quarter'>
-						<p classname='lead'>
+						<p className='lead'>
 							Here is an unordered list of friends, that run their own business
 							and have a website. If you stumble accross this site, and I forgot
 							you, please <a href='/contact'>give me a holler.</a>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import * as introStyle from './intro.module.scss';
-
+import Img from 'gatsby-image';
 const Intro = () => {
 	return (
 		<div className={introStyle.introWrapper}>
@@ -22,6 +22,9 @@ const Intro = () => {
 				<Link to='/about' className='btn'>
 					More about me
 				</Link>
+			</div>
+			<div className={introStyle.portrait}>
+				<img src={`img/portrait_dennisEitner.png`} />
 			</div>
 		</div>
 	);

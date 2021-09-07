@@ -28,7 +28,10 @@ const Intro = () => {
 							</Link>
 						</div>
 					</Col>
-					<Col xs={12} md={{ span: 3, offset: 1 }}>
+					<Col
+						xs={12}
+						md={{ span: 3, offset: 1 }}
+						className='d-sm-none d-md-block'>
 						<div className={introStyle.portrait}>
 							<img
 								src={`img/portrait_dennisEitner.png`}

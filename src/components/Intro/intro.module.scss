@@ -12,27 +12,9 @@ $mq-breakpoints: (
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	//height: calc(100vh - 2*1.5rem);
 	min-height: 100vh;
 	max-width: 100vw;
-
-	@include mq($from: mobile, $until: wide) {
-		width: 100vw;
-		padding-right: 2rem;
-	}
-	@include mq($until: tablet) {
-		width: 100vw;
-		padding-right: 2rem;
-		//margin-top: 1.5rem;
-		h1 {
-			font-size: 2rem;
-			line-height: 2.25rem;
-		}
-	}
-
 	.intro {
-		width: 50vw;
-
 		h1 {
 			font-family: 'Montserrat Black', sans-serif;
 			font-weight: 900; /* black */
@@ -53,13 +35,12 @@ $mq-breakpoints: (
 			}
 		}
 	}
+}
 
-	.portrait {
-		width: 25vw;
-		img {
-			border-radius: 50%;
-			border: 20px solid #ffd400;
-			transform: rotate(10deg);
-		}
+.portrait {
+	img {
+		border-radius: 50%;
+		border: 20px solid #ffd400;
+		transform: rotate(10deg);
 	}
 }

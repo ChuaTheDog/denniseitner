@@ -25,7 +25,7 @@ export default function Template({
 					blogtitle={frontmatter.title}
 					featuredImage={frontmatter.featuredImage.publicURL}></BlogHeader>
 			) : (
-				<Header title={frontmatter.title}></Header>
+				<BlogHeader blogtitle={frontmatter.title}></BlogHeader>
 			)}
 			<div className='contentWrapper'>
 				<Content body={body}></Content>

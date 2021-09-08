@@ -1,13 +1,17 @@
-
 @import '../../../../node_modules/sass-mq/mq';
 
-.header{
- //   background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
- background-image: linear-gradient(180deg, #BF1A90 0%, #661466 70%, #220F61 100%);
- background-position: center;
+.header {
+	//   background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
+	background-image: linear-gradient(
+		180deg,
+		#bf1a90 0%,
+		#661466 70%,
+		#220f61 100%
+	);
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: 66vh;
 	width: 100vw;
 	top: 0;
 	z-index: 0;
@@ -16,36 +20,36 @@
 	justify-content: center;
 	margin: 0 -15px;
 	position: relative;
-	img{
+	img {
 		position: absolute;
-		top: 0; 
-		left: 0; 
-		max-width:100%;
+		top: 0;
+		left: 0;
+		max-width: 100%;
 		min-width: 100vw;
 		height: auto;
-		max-height: 100vh;
+		max-height: 66vh;
 		z-index: 99;
-		
 	}
-	.overlay{
-			position: absolute;
-			min-width: 100vw;
-			height: 300px; 
-			bottom: 0;
-			z-index: 999;
-			background-image: linear-gradient(180deg, rgba(34,15,97,0), rgba(34,15,97,0) 70%, rgba(34,15,97,1) 100%);
+	.overlay {
+		position: absolute;
+		min-width: 100vw;
+		height: 300px;
+		bottom: 0;
+		z-index: 999;
+		background-image: linear-gradient(
+			180deg,
+			rgba(34, 15, 97, 0),
+			rgba(34, 15, 97, 0) 70%,
+			rgba(34, 15, 97, 1) 100%
+		);
 
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-	
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	h1 {
-	//	font-size: 5rem;
+		//	font-size: 5rem;
 		z-index: 999;
 		text-align: center;
-
 	}
-
-
 }

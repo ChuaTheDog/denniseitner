@@ -1,23 +1,40 @@
 @import '../../../node_modules/sass-mq/mq';
 
-.header{
-   // background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
-	
-   background-image: linear-gradient(180deg, #BF1A90 0%, #661466 70% ,#54135d 80%, #220F61 95%);
-   background-position: center;
+.header {
+	// background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
+
+	background-image: linear-gradient(
+		180deg,
+		#bf1a90 0%,
+		#661466 70%,
+		#54135d 80%,
+		#220f61 95%
+	);
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 100vh;
+	min-height: 66vh;
 	min-width: 100vw;
 	top: 0;
 	z-index: 0;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	padding: 5rem;
 	margin: -1.5rem;
-	h1 {
-		z-index: 999;
-		text-align: center;
+	.introImage {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		img {
+			margin: auto;
+			display: block;
+		}
+	}
+	.introInfo {
+		h1 {
+			z-index: 999;
+		}
 	}
 }

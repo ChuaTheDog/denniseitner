@@ -21,7 +21,7 @@ const blogList = (data) => {
 
 	return (
 		<>
-			<Header title={'Blog page'}></Header>
+			<Header></Header>
 			<div className='contentWrapper'>
 				<Container>
 					<Row>
@@ -33,10 +33,7 @@ const blogList = (data) => {
 						<Col>
 							<Pagination>
 								{!isFirst && (
-									<Pagination.Item href={prevPage}>
-										{' '}
-										← Previous Page
-									</Pagination.Item>
+									<Pagination.Item href={prevPage}>←</Pagination.Item>
 								)}
 								{Array.from({ length: numPages }, (_, i) => (
 									<Pagination.Item
@@ -46,9 +43,8 @@ const blogList = (data) => {
 									</Pagination.Item>
 								))}
 								{!isLast && (
-									<Pagination.Item href={nextPage}>
-										{' '}
-										Next Page →
+									<Pagination.Item href={`/blog/${nextPage}`}>
+										→
 									</Pagination.Item>
 								)}
 							</Pagination>

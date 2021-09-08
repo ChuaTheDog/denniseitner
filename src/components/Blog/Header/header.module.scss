@@ -20,6 +20,7 @@
 	justify-content: center;
 	margin: 0 -15px;
 	position: relative;
+	overflow: hidden;
 	img {
 		position: absolute;
 		top: 0;
@@ -27,7 +28,7 @@
 		max-width: 100%;
 		min-width: 100vw;
 		height: auto;
-		max-height: 66vh;
+		max-height: 100vh;
 		z-index: 99;
 	}
 	.overlay {

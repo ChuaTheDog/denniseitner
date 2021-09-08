@@ -6,7 +6,7 @@ const Header = ({ blogtitle, featuredImage }) => {
 
 	return (
 		<div className={HeaderStyle.header}>
-			<img src={featuredImageBG} alt='testiamge'></img>
+			<img src={featuredImageBG}></img>
 			<div className={HeaderStyle.overlay} />
 			<h1>{blogtitle}</h1>
 		</div>

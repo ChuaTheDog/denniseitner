@@ -23,9 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
 		if (result.errors) {
 			throw result.errors;
 		}
-
 		const posts = result.data.allMdx.nodes;
-
 		// create page for each mdx file
 		posts.forEach((post, index) => {
 			const previous = index === posts.length - 1 ? null : posts[index + 1];
@@ -42,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
 		});
 
 		// Create blog-list pages
-		const postsPerPage = 12;
+		const postsPerPage = 5;
 		const numPages = Math.ceil(posts.length / postsPerPage);
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({

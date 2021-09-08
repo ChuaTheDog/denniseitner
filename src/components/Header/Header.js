@@ -1,6 +1,7 @@
 import React from 'react';
 import * as headerStyles from './header.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
+import portraitImage from '../../../static/img/portrait_dennisEitner.png';
 import Img from 'gatsby-image';
 
 const Header = (props) => {
@@ -10,10 +11,7 @@ const Header = (props) => {
 				<Row>
 					<Col xs={12} md={4}>
 						<div className={headerStyles.introImage}>
-							<img
-								src={`img/portrait_dennisEitner.png`}
-								className='img-fluid'
-							/>
+							<img src={portraitImage} className='img-fluid' />
 						</div>
 					</Col>
 					<Col xs={12} md={8}>

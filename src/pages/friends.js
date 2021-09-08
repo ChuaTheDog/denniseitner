@@ -13,7 +13,12 @@ const Friends = () => (
 							and have a website. If you stumble accross this site, and I forgot
 							you, please <a href='/contact'>give me a holler.</a>
 						</p>
-
+						<p>
+							<a href='http://www.torstenschallmaier.com'>
+								Thorsten Schallmaier
+							</a>{' '}
+							is an awesome at writing (creative) texts.
+						</p>
 						<p>
 							Bart from <a href='http://www.winemaker.com'>Winemaker.com</a> has
 							the finest wines in the country.
@@ -29,7 +34,7 @@ const Friends = () => (
 
 						<p>
 							Visit{' '}
-							<a href='/https://www.cilgiapfleiderer.com/'>Cilgia pfleiderer</a>
+							<a href='/https://www.cilgiapfleiderer.com/'>Cilgia pfleiderer</a>{' '}
 							if you feel that your inner child needs healing.
 						</p>
 
@@ -42,11 +47,6 @@ const Friends = () => (
 							Lee Diamant from{' '}
 							<a href='https://we-recruit.ch/de/'>we-recruit</a>. He is the best
 							recruiter since Uncle Sam in the 1940ies.
-						</p>
-
-						<p>
-							<a href='http://www.thepianosalon.ch/'>Sebastien Dupuis</a> is my
-							piano professor, and the best player since chopin.
 						</p>
 
 						<p>

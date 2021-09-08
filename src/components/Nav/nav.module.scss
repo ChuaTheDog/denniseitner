@@ -16,7 +16,7 @@
 
 nav {
 	margin: 0;
-	padding: 0;
+	padding: 0 1rem;
 	list-style: none;
 	display: flex;
 	justify-content: flex-end;
@@ -28,9 +28,8 @@ nav {
 	position: relative;
 	//border-right: 1px #000 solid;
 	text-decoration: none;
-
 	position: relative;
-	max-width: 150px;
+	max-width: 120px;
 	&:hover {
 		color: white;
 	}

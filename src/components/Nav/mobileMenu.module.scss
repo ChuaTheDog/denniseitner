@@ -1,0 +1,19 @@
+.mobileNav {
+	width: 100vw;
+	height: 100vh;
+	transition: all 3s ease-in-out;
+	transform: translateY(50%);
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: blue;
+	&.open {
+		//display: flex;
+		transform: translateY(0);
+	}
+	&.closed {
+		background-color: green;
+		transform: translateY(0);
+	}
+}

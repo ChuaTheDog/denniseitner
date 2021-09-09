@@ -77,5 +77,6 @@ module.exports = {
 		},
 		'gatsby-plugin-react-svg',
 		'gatsby-plugin-remove-serviceworker',
+		`gatsby-plugin-styled-components`,
 	],
 };

@@ -1,3 +1,18 @@
+@import '../../../node_modules/sass-mq/mq';
+
+/*
+@include mq($until: tablet) {
+	margin-bottom: auto;
+}
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+*/
+
 .navWrapper {
 	width: 100vw;
 	max-width: 50vw;
@@ -13,39 +28,48 @@
 	top: 0.5rem;
 	left: 1rem;
 }
-
-nav {
-	margin: 0;
-	padding: 0 1rem;
-	list-style: none;
-	display: flex;
-	justify-content: flex-end;
-	width: 100vw;
-}
-.navItem {
-	text-align: center;
-	flex-grow: 1;
-	position: relative;
-	//border-right: 1px #000 solid;
-	text-decoration: none;
-	position: relative;
-	max-width: 120px;
-	&:hover {
-		color: white;
+@include mq($from: tablet) {
+	nav {
+		margin: 0;
+		padding: 0 1rem;
+		list-style: none;
+		display: flex;
+		justify-content: flex-end;
+		width: 100vw;
 	}
+	.navItem {
+		text-align: center;
+		flex-grow: 1;
+		position: relative;
+		//border-right: 1px #000 solid;
+		text-decoration: none;
+		position: relative;
+		max-width: 120px;
+		&:hover {
+			color: white;
+		}
 
-	&:not(:last-child) {
-		&::after {
-			//	padding: 0 1rem;
-			position: absolute;
-			top: 50%;
-			bottom: 50%;
-			right: 0;
-			content: '';
-			width: 5px;
-			height: 5px;
-			border-radius: 5px;
-			background-color: #ffd400;
+		&:not(:last-child) {
+			&::after {
+				//	padding: 0 1rem;
+				position: absolute;
+				top: 50%;
+				bottom: 50%;
+				right: 0;
+				content: '';
+				width: 5px;
+				height: 5px;
+				border-radius: 5px;
+				background-color: #ffd400;
+			}
+		}
+	}
+}
+
+@include mq($until: tablet) {
+	nav {
+		.navItem {
+			display: none;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as navStyles from './nav.module.scss';
 import Home from '../../assets/svg/Home.svg';
-
+import MobileNav from './MobileNav';
 const Nav = () => {
 	return (
 		<div className={navStyles.navWrapper} id='nav'>
@@ -22,6 +22,7 @@ const Nav = () => {
 					Contact
 				</a>
 			</nav>
+			<MobileNav></MobileNav>
 		</div>
 	);
 };

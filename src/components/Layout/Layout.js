@@ -6,12 +6,14 @@ import Sidebar from '../Sidebar/Sidebar';
 import Seo from '../SEO/SEO';
 import Nav from '../Nav/Nav';
 import ScrollButton from '../ScrollButton/ScrollButton';
+import { createGlobalStyle } from 'styled-components';
 
 export default function Layout({ children }) {
 	return (
 		<>
 			<Seo></Seo>
 			<Nav />
+
 			<Container fluid>{children}</Container>
 			<ScrollButton />
 		</>

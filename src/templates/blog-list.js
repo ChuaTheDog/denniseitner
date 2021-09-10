@@ -20,9 +20,14 @@ const blogList = (data) => {
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
 
 	return (
-		<>
-			{Posts}
+		<div>
+			<Header></Header>
 			<Container>
+				<Row>
+					<Col>
+						<div className='pt-3'>{Posts}</div>
+					</Col>
+				</Row>
 				<Row>
 					<Col>
 						<Pagination>
@@ -41,7 +46,7 @@ const blogList = (data) => {
 					</Col>
 				</Row>
 			</Container>
-		</>
+		</div>
 	);
 };
 

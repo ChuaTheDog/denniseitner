@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import * as mobileMenu from './mobileMenu.module.scss';
 import styled from 'styled-components';
 
 const StyledMenu = styled.nav`

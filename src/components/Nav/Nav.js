@@ -40,9 +40,7 @@ const Nav = () => {
 				<a className={navStyles.navItem} href='/friends'>
 					Friends
 				</a>
-				<a className={navStyles.navItem} href='/blog'>
-					Blog
-				</a>
+
 				<a className={navStyles.navItem} href='/contact'>
 					Contact
 				</a>

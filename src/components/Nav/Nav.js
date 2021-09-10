@@ -24,7 +24,6 @@ const Nav = () => {
 					Contact
 				</a>
 			</nav>
-			<MobileNav></MobileNav>
 		</div>
 	);
 };

@@ -13,7 +13,7 @@ module.exports = {
 				implementation: require('node-sass'),
 			},
 		},
-		'gatsby-plugin-styled-components',
+
 		'gatsby-plugin-sharp',
 		'gatsby-remark-images',
 		'gatsby-plugin-react-helmet',

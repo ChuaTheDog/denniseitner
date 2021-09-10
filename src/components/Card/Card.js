@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import * as cardStyles from './card.module.scss';
-import Moment from 'react-moment';
 
 const MAXLENGTH = 250;
 
@@ -14,14 +13,8 @@ const Card = ({ post }) => {
 					<Link to={`/blog/${post.frontmatter.slug}`}>
 						<div className={cardStyles.dateAndPreview}>
 							<div className={cardStyles.cardDate}>
-								<div className={cardStyles.day}>
-									<Moment format='DD'>{post.frontmatter.date}</Moment>
-								</div>
-								<div className={cardStyles.month}>
-									<Moment format='MMM'>{post.frontmatter.date}</Moment>
-									&nbsp;
-									<Moment format='YY'>{post.frontmatter.date}</Moment>
-								</div>
+								<div className={cardStyles.day}></div>
+								<div className={cardStyles.month}></div>
 							</div>
 							<div className={cardStyles.previewImage}>
 								{!!post.frontmatter.featuredImage ? (

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import * as introStyle from './intro.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
+import Button from '../Button/Button';
 import Img from 'gatsby-image';
 const Intro = () => {
 	return (
@@ -23,8 +24,8 @@ const Intro = () => {
 								&nbsp; In this order. I write feasible User Stories with
 								testable acceptance criteria, create flowcharts and wireframes.
 							</p>
-							<Link to='/about' className='btn'>
-								More about me
+							<Link to='/about'>
+								<Button buttonText='More about me'>More about me</Button>
 							</Link>
 						</div>
 					</Col>

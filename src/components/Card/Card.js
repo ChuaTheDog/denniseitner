@@ -10,7 +10,7 @@ const Card = ({ post }) => {
 	return (
 		<div className='row'>
 			<div className={cardStyles.cardWrapper}>
-				<div className='col-md-2'>
+				<div className='col-md-3 col-lg-2'>
 					<Link to={`/blog/${post.frontmatter.slug}`}>
 						<div className={cardStyles.dateAndPreview}>
 							<div className={cardStyles.cardDate}>
@@ -33,7 +33,7 @@ const Card = ({ post }) => {
 						</div>
 					</Link>
 				</div>
-				<div className='col-md-10'>
+				<div className='col-md-9 col-lg-10'>
 					<div className={cardStyles.cardContent}>
 						<h3>{post.frontmatter.title}</h3>
 						<p>{post.excerpt.substr(0, MAXLENGTH)}</p>

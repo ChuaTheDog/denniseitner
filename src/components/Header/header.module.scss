@@ -37,4 +37,13 @@
 			z-index: 999;
 		}
 	}
+
+	.followMeIcons {
+		width: 200px;
+		display: flex;
+		flex-direction: row;
+		.followMeLinks {
+			margin-right: 2rem;
+		}
+	}
 }

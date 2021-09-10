@@ -3,7 +3,9 @@ import * as headerStyles from './header.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import portraitImage from '../../../static/img/portrait_dennisEitner.png';
 import Img from 'gatsby-image';
-
+import LinkedIn from '../../assets/svg/Linkedin.svg';
+import GitHub from '../../assets/svg/Github.svg';
+import { Link } from 'gatsby';
 const Header = (props) => {
 	return (
 		<div className={headerStyles.header}>
@@ -24,6 +26,22 @@ const Header = (props) => {
 								cum voluptatibus enim dolores!
 							</p>
 						</div>
+						<Row>
+							<Col xs={12}>
+								<div className={headerStyles.followMeIcons}>
+									<Link
+										to='https://www.linkedin.com/in/denniseitner/'
+										className={headerStyles.followMeLinks}>
+										<LinkedIn></LinkedIn>
+									</Link>
+									<Link
+										to='https://github.com/ChuaTheDog'
+										className={headerStyles.followMeLinks}>
+										<GitHub></GitHub>
+									</Link>
+								</div>
+							</Col>
+						</Row>
 					</Col>
 				</Row>
 			</Container>

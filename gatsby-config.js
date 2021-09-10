@@ -8,20 +8,6 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: `gatsby-plugin-prefetch-google-fonts`,
-			options: {
-				fonts: [
-					{
-						family: `Pacifico`,
-					},
-					{
-						family: `Montserrat`,
-						variants: [`400`, `900`],
-					},
-				],
-			},
-		},
-		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
 				implementation: require('node-sass'),

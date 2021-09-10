@@ -21,13 +21,8 @@ const blogList = (data) => {
 
 	return (
 		<>
-			<Header></Header>
+			{Posts}
 			<Container>
-				<Row>
-					<Col>
-						<div className='pt-3'>{Posts}</div>
-					</Col>
-				</Row>
 				<Row>
 					<Col>
 						<Pagination>

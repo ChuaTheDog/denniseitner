@@ -21,7 +21,6 @@ const blogList = (data) => {
 
 	return (
 		<>
-			<Header></Header>
 			<div className='contentWrapper'>
 				<Container>
 					<Row>

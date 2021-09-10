@@ -26,7 +26,8 @@ $mq-breakpoints: (
 .home {
 	position: absolute;
 	top: 0.5rem;
-	left: 1rem;
+	left: 0.5rem;
+	height: 1.25rem;
 }
 @include mq($from: tablet) {
 	nav {
@@ -36,6 +37,10 @@ $mq-breakpoints: (
 		display: flex;
 		justify-content: flex-end;
 		width: 100vw;
+		background-image: linear-gradient(#bf1a90 0%, rgba(255, 255, 255, 0) 100%);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	.navItem {
 		text-align: center;

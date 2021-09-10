@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
-import Header from '../components/Header/Header';
 import ArticleFooter from '../components/Blog/Footer/Footer';
 import { Helmet } from 'react-helmet';
 

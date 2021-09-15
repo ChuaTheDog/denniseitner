@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Header from '../components/Header/Header';
+import Page from '../components/Page/Page';
 
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
@@ -20,7 +21,7 @@ const blogList = (data) => {
 		.map((edge) => <PostCard key={edge.node.id} post={edge.node} />);
 
 	return (
-		<>
+		<Page>
 			<Header></Header>
 			<div className='contentWrapper'>
 				<Container>
@@ -52,7 +53,7 @@ const blogList = (data) => {
 					</Row>
 				</Container>
 			</div>
-		</>
+		</Page>
 	);
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 
+import Page from '../components/Page/Page';
+
 const work = () => {
 	return (
-		<div>
+		<Page>
 			<Header></Header>
 			<div className='contentWrapper'>
 				<div className='container'>
@@ -12,7 +14,7 @@ const work = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Page>
 	);
 };
 

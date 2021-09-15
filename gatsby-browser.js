@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from './src/components/Layout/Layout';
+// import React from 'react';
+// import Layout from './src/components/Layout/Layout';
 
-require('typeface-pacifico');
+// require('typeface-pacifico');
 
-export function wrapPageElement({ element, props }) {
-	return <Layout {...props}>{element}</Layout>;
-}
+// export function wrapPageElement({ element, props }) {
+// 	return <Layout {...props}>{element}</Layout>;
+// }

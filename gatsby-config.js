@@ -7,6 +7,7 @@ module.exports = {
 		description: 'I haz website. Much wow.',
 	},
 	plugins: [
+        `gatsby-plugin-preload-fonts`,
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {

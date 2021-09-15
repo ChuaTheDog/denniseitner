@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import '../../assets/styles/fonts.scss';
 import 'normalize.css';
 import '../../assets/styles/styles.scss';
 import Seo from '../SEO/SEO';

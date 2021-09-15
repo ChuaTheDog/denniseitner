@@ -1,22 +1,28 @@
-@font-face {
-	font-family: Pacifico;
-	font-weight: 400;
-	font-style: normal;
-	src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
-	font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-@font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
-}
+// @font-face {
+// 	font-family: Pacifico;
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+// 	font-display: swap;
+// }
 
-@font-face {
-	font-family: 'Montserrat Black';
-	src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype'); /* Safari, Android, iOS */
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
 
-@font-face {
-	font-family: 'Roboto Black';
-	src: url('../fonts/Roboto/RobotoSlab-Black.ttf') format('truetype'); /* Safari, Android, iOS */
-}
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+// }
+
+// @font-face {
+// 	font-family: 'Montserrat Black';
+// 	src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+// @font-face {
+// 	font-family: 'Roboto Black';
+// 	src: url('../fonts/Roboto/RobotoSlab-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+// }

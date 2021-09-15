@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
-import bodyFont from '../assets/fonts/Montserrat/Montserrat-Regular.ttf';
-import BoldFont from '../assets/fonts/Montserrat/Montserrat-Black.ttf';
-import headingFont from '../assets/fonts/Pacifico/Pacifico-Regular.ttf';
+// import bodyFont from '../assets/fonts/Montserrat/Montserrat-Regular.ttf';
+// import BoldFont from '../assets/fonts/Montserrat/Montserrat-Black.ttf';
+// import headingFont from '../assets/fonts/Pacifico/Pacifico-Regular.ttf';
 
 const Typography = createGlobalStyle`
   @font-face {
@@ -58,4 +58,4 @@ const Typography = createGlobalStyle`
 
 `;
 
-export default Typography;
+// export default Typography;

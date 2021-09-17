@@ -1,38 +1,33 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { getImage } from "gatsby-plugin-image";
+
+import Seo from '../components/SEO/SEO';
 import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
 import ArticleFooter from '../components/Blog/Footer/Footer';
-import { Helmet } from 'react-helmet';
 
-export default function Template({
-	data,
-	pageContext, // this prop will be injected by the GraphQL query below.
-}) {
+const Template = ({ data, pageContext }) => { // this prop will be injected by the GraphQL query below.
 	const { frontmatter, body } = data.mdx;
+    const { title, featuredImage } = frontmatter;
 	const { previous, next } = pageContext;
-	if (previous === null) {
-	}
+
+    const image = featuredImage && getImage(featuredImage);
 
 	return (
 		<div>
-			<Helmet>
-				<title>{frontmatter.title}</title>
-			</Helmet>
-			{frontmatter.featuredImage ? (
-				<BlogHeader
-					blogtitle={frontmatter.title}
-					featuredImage={frontmatter.featuredImage.publicURL}></BlogHeader>
-			) : (
-				<BlogHeader blogtitle={frontmatter.title}></BlogHeader>
-			)}
+			<Seo title={title} />
+            <BlogHeader blogtitle={title} image={image} />
 			<div className='contentWrapper'>
-				<Content body={body}></Content>
-				<ArticleFooter previous={previous} next={next}></ArticleFooter>
+				<Content body={body} />
+				<ArticleFooter previous={previous} next={next} />
 			</div>
 		</div>
 	);
 }
+
+export default Template;
+
 export const pageQuery = graphql`
 	query ($slug: String!) {
 		mdx(fields: { slug: { eq: $slug } }) {
@@ -42,8 +37,9 @@ export const pageQuery = graphql`
 				slug
 				title
 				featuredImage {
-					id
-					publicURL
+					childImageSharp {
+                        gatsbyImageData
+                    }
 				}
 			}
 		}

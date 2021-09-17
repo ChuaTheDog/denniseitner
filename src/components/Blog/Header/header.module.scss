@@ -21,16 +21,6 @@
 	margin: 0 -15px;
 	position: relative;
 	overflow: hidden;
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		max-width: 100%;
-		min-width: 100vw;
-		height: auto;
-		max-height: 100vh;
-		z-index: 99;
-	}
 	.overlay {
 		position: absolute;
 		min-width: 100vw;
@@ -53,4 +43,15 @@
 		z-index: 999;
 		text-align: center;
 	}
+}
+
+.Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    z-index: 99;
 }

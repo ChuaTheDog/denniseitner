@@ -37,7 +37,23 @@ $mq-breakpoints: (
 	}
 }
 
+.introMain {
+    width: 66.6666%;
+    padding-right: 50px;
+}
+
+.introImage {
+    width: 33.33333%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .portrait {
+
+    .gatsby-image-wrapper {
+        transform: rotate(10deg);
+    }
+
 	img {
 		border-radius: 50%;
 		border: 20px solid #ffd400;

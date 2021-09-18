@@ -23,12 +23,33 @@ $mq-breakpoints: (
 	z-index: 999;
 }
 
+.homeLink {
+    position: relative;
+    z-index: 1000;
+}
+
 .home {
 	position: absolute;
 	top: 0.5rem;
 	left: 0.5rem;
 	height: 1.25rem;
 }
+
+.nav {
+    margin: 0px 0px 0px auto;
+    padding: 0px 0.5rem 0px 0px;
+    list-style: none;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    width: 100vw;
+    line-height: 2rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
 @include mq($from: tablet) {
 	nav {
 		margin: 0;

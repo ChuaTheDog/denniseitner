@@ -1,7 +1,11 @@
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
-	margin: 0;
-	padding: 0;
 	width: 100%;
 	color: white;
 	overflow-x: hidden;
@@ -17,8 +21,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 400%;
 	background-attachment: fixed;
-
-	width: 100vw;
+	width: 100%;
 	box-shadow: 0 14px 27px 9px rgba(0, 0, 0, 0.5);
 }
 

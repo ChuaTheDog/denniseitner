@@ -1,22 +1,24 @@
 import React from 'react';
-import * as headerStyles from './header.module.scss';
-import { Container, Row, Col } from 'react-bootstrap';
-import portraitImage from '../../../static/img/portrait_dennisEitner.png';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+
+import Portrait from '../Portrait/Portrait';
+
 import LinkedIn from '../../assets/svg/Linkedin.svg';
 import GitHub from '../../assets/svg/Github.svg';
-import { Link } from 'gatsby';
-const Header = (props) => {
+
+import * as headerStyles from './header.module.scss';
+
+const Header = () => {
 	return (
 		<div className={headerStyles.header}>
-			<Container>
-				<Row>
-					<Col xs={12} md={4}>
+			<div className="container">
+				<div className={headerStyles.headerContainer}>
+					<div className={headerStyles.headerImage}>
 						<div className={headerStyles.introImage}>
-							<img src={portraitImage} className='img-fluid' />
+							<Portrait />
 						</div>
-					</Col>
-					<Col xs={12} md={8}>
+					</div>
+					<div className={headerStyles.headerContent}>
 						<div className={headerStyles.introInfo}>
 							<h1>Hi, I'm Dennis. </h1>
 							<p>
@@ -28,25 +30,17 @@ const Header = (props) => {
 								<Link to='/about'> learn more about me here</Link> if you like.
 							</p>
 						</div>
-						<Row>
-							<Col xs={12}>
-								<div className={headerStyles.followMeIcons}>
-									<Link
-										to='https://www.linkedin.com/in/denniseitner/'
-										className={headerStyles.followMeLinks}>
-										<LinkedIn></LinkedIn>
-									</Link>
-									<Link
-										to='https://github.com/ChuaTheDog'
-										className={headerStyles.followMeLinks}>
-										<GitHub></GitHub>
-									</Link>
-								</div>
-							</Col>
-						</Row>
-					</Col>
-				</Row>
-			</Container>
+						<div className={headerStyles.followMeIcons}>
+                            <a href='https://www.linkedin.com/in/denniseitner/' target="_blank" rel="noreferrer noopener" className={headerStyles.followMeLinks}>
+                                <LinkedIn />
+                            </a>
+                            <a href='https://github.com/ChuaTheDog' target="_blank" rel="noreferrer noopener" className={headerStyles.followMeLinks}>
+                                <GitHub />
+                            </a>
+                        </div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

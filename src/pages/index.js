@@ -1,17 +1,13 @@
 import React from 'react';
 import Intro from '../components/Intro/Intro';
-import Image from '../components/Image/Image';
 
-import Page from '../components/Page/Page';
+import Layout from '../components/Layout/Layout';
 
-// markup
 const IndexPage = () => {
 	return (
-		<Page>
-            <main>
-                <Intro></Intro>
-            </main>
-        </Page>
+		<Layout withHeader={false}>
+            <Intro />
+        </Layout>
 	);
 };
 

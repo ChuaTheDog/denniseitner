@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import Page from '../components/Page/Page';
+import Layout from '../components/Layout/Layout';
 
 // markup
 const NotFoundPage = () => {
-	return <Page>404</Page>;
+	return <Layout>404</Layout>;
 };
 
 export default NotFoundPage;

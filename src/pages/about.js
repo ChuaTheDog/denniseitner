@@ -1,21 +1,16 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import { Helmet } from 'react-helmet';
 
-import Page from '../components/Page/Page';
+import Layout from '../components/Layout/Layout';
+import Seo from '../components/SEO/SEO';
 
-const AboutPage = () => (
-    <Page>
-        <main>
-            <Helmet>
-                <meta charSet='utf-8' />
-                <title>My Title</title>
-                <link rel='canonical' href='http://mysite.com/example' />
-            </Helmet>
-            <Header title={'Hello World'}></Header>
+const AboutPage = () => {
+
+    return (
+        <Layout>
+            <Seo title='About' />
             <div className='contentWrapper'>
                 <div className='container'>
-                    <h2>Hello World. </h2>
+                    <h2>Hello World.</h2>
                     <p>
                         I create wireframes and prototypes to illustrate the user stories so
                         that they can be tested before implementation. In regular kickoffs and
@@ -29,7 +24,6 @@ const AboutPage = () => (
                         interaction and user interface design, testing, user stories. I also
                         regularly interact with business stakeholders and manage the backlog.{' '}
                     </p>
-
                     <p>
                         My passion is the realization of ideas and concepts. I have a strong
                         entrepreneurial and commercial mindset. Through my education and
@@ -40,8 +34,8 @@ const AboutPage = () => (
                     </p>
                 </div>
             </div>
-        </main>
-    </Page>
-);
+        </Layout>
+    )
+};
 
 export default AboutPage;

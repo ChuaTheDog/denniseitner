@@ -15,14 +15,15 @@ const SEO = ({ description, title }) => {
 			}
 		`
 	);
+
 	return (
 		<div>
 			<Helmet>
 				{/* General tags */}
-				<title>{site.siteMetadata.title}</title>
+				<title>{title ? title : site.siteMetadata.title}</title>
 				<meta charSet='utf-8' />
 				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
-				<meta name='description' content={site.siteMetadata.description} />
+				<meta name='description' content={description ? description : site.siteMetadata.description} />
 				<meta name='title' content='Dennis Eitner | Digital Experiences' />
 				<meta
 					name='keywords'

@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../components/Header/Header';
 
-import Page from '../components/Page/Page';
+import Layout from '../components/Layout/Layout';
+import Seo from '../components/SEO/SEO';
 
 const work = () => {
 	return (
-		<Page>
-			<Header></Header>
+		<Layout>
+            <Seo title='Work' />
 			<div className='contentWrapper'>
 				<div className='container'>
 					<div className='row'>
@@ -14,7 +14,7 @@ const work = () => {
 					</div>
 				</div>
 			</div>
-		</Page>
+		</Layout>
 	);
 };
 

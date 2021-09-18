@@ -39,6 +39,8 @@ module.exports = {
 				],
 			},
 		},
+        'gatsby-plugin-image',
+        'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -49,7 +51,14 @@ module.exports = {
 			},
 			__key: 'pages',
 		},
-
+        {
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `images`,
+				path: `${__dirname}/static/img`
+			},
+			__key: 'pages',
+		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

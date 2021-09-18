@@ -9,15 +9,15 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as contactFormStyles from './contactForm.module.scss';
 import * as Yup from 'yup';
+
 import Button from '../../Button/Button';
 import ReactLoading from 'react-loading';
-import { Form } from 'react-bootstrap';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ContactForm = () => {
-	const [formSuccess, setformSuccess] = useState(false);
-	const [loading, setLoading] = useState(false);
+	const [ formSuccess, setformSuccess ] = useState(false);
+	const [ loading, setLoading ] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -39,7 +39,7 @@ const ContactForm = () => {
 			setLoading(true);
 			await sleep(500);
 			const { name, email, message } = values;
-			const response = await fetch(
+			await fetch(
 				`${process.env.GATSBY_SERVERLESS_BASE}/contactForm/contactForm`,
 				{
 					method: 'POST',
@@ -60,8 +60,7 @@ const ContactForm = () => {
 			<div>
 				{formSuccess ? (
 					<p className={`${contactFormStyles.confirmation}`}>
-						Thank you, <span>{formik.values.name}</span>. I'll do my best to
-						answer as quick as I can.
+						Thank you, <span>{formik.values.name}</span>. I'll do my best to answer as quick as I can.
 					</p>
 				) : (
 					<form onSubmit={formik.handleSubmit}>
@@ -70,39 +69,28 @@ const ContactForm = () => {
 								Don’t fill this out if you’re human: <input name='bot-field' />
 							</label>
 						</p>
-						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
-							<Form.Label>Name:</Form.Label>
-							<Form.Control
+						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
+							<label htmlFor="name">Name:</label>
+							<input
 								id='name'
 								name='name'
 								type='text'
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.name}
-								className={
-									formik.touched.email && formik.errors.email
-										? contactFormStyles.error
-										: null
-								}
+								className={`form-control ${(formik.touched.email && formik.errors.email) ? contactFormStyles.error : ''}`}
 							/>
-							<div
-								className={`error-message help yellow ${contactFormStyles.feedback}`}>
-								{formik.touched.name && formik.errors.name
-									? formik.errors.name
-									: null}
+							<div className={`error-message help yellow ${contactFormStyles.feedback}`}>
+								{formik.touched.name && formik.errors.name && formik.errors.name}
 							</div>
-						</Form.Group>
-						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
+						</div>
+						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
 							<label htmlFor='email'>Email*</label>
-							<Form.Control
+							<input
 								id='email'
 								name='email'
 								type='email'
-								className={
-									formik.touched.email && formik.errors.email
-										? contactFormStyles.error
-										: null
-								}
+								className={`form-control ${(formik.touched.email && formik.errors.email) && contactFormStyles.error}`}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.email}
@@ -110,18 +98,16 @@ const ContactForm = () => {
 							<div
 								className={`error-message help yellow ${contactFormStyles.feedback}`}>
 								&nbsp;
-								{formik.touched.email && formik.errors.email
-									? formik.errors.email
-									: null}
+								{formik.touched.email && formik.errors.email && formik.errors.email}
 							</div>
-						</Form.Group>
-						<Form.Group className={`${contactFormStyles.customFormGroup}`}>
+						</div>
+						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
 							<div className={`field ${contactFormStyles.field}`}>
-								<label>Message*</label>
+								<label htmlFor="message">Message*</label>
 								<div className='control'>
 									<textarea
 										name='message'
-										id=''
+										id='message'
 										cols='30'
 										rows='10'
 										className='form-control'
@@ -131,7 +117,7 @@ const ContactForm = () => {
 										value={formik.values.message}></textarea>
 								</div>
 							</div>
-						</Form.Group>
+						</div>
 						<div className={`field ${contactFormStyles.buttonMargin}`}>
 							{loading ? (
 								<ReactLoading
@@ -141,7 +127,7 @@ const ContactForm = () => {
 									width={50}
 								/>
 							) : (
-								<Button type='submit' buttonText='Send'></Button>
+								<Button type='submit' buttonText='Send' />
 							)}
 						</div>
 					</form>

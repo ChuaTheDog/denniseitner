@@ -1,14 +1,18 @@
 # Bug: 
--[ ] Back and forth buttons on blog page do not work
 
 
 # TODO: 
 - [x]  Include React Helmet
-- [x]  Gatsby Images, lazy load
+- []  Gatsby Images, lazy load
 - [ ]  Preload complete sites and assets
 - [x]  Improve Fonts
 - [x]  Better Font Styling in css
-- [ ]  Replace scss modes with css in js
+- [ ]  Replace scss modes with styled components 
+- [ ]  remove bootstrap css and replace grid system
+- [ ]  gatsby images for all images
+- [ ]  google analytics
+- [ ]  use sanity as blog source
+- [ ]  improve seo
 
 
 # ToFix: 

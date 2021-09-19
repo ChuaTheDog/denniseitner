@@ -16,8 +16,8 @@ import ReactLoading from 'react-loading';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ContactForm = () => {
-	const [ formSuccess, setformSuccess ] = useState(false);
-	const [ loading, setLoading ] = useState(false);
+	const [formSuccess, setformSuccess] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -60,7 +60,8 @@ const ContactForm = () => {
 			<div>
 				{formSuccess ? (
 					<p className={`${contactFormStyles.confirmation}`}>
-						Thank you, <span>{formik.values.name}</span>. I'll do my best to answer as quick as I can.
+						Thank you, <span>{formik.values.name}</span>. I'll do my best to
+						answer as quick as I can.
 					</p>
 				) : (
 					<form onSubmit={formik.handleSubmit}>
@@ -70,7 +71,7 @@ const ContactForm = () => {
 							</label>
 						</p>
 						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
-							<label htmlFor="name">Name:</label>
+							<label htmlFor='name'>Name:</label>
 							<input
 								id='name'
 								name='name'
@@ -78,10 +79,17 @@ const ContactForm = () => {
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.name}
-								className={`form-control ${(formik.touched.email && formik.errors.email) ? contactFormStyles.error : ''}`}
+								className={`form-control ${
+									formik.touched.email && formik.errors.email
+										? contactFormStyles.error
+										: ''
+								}`}
 							/>
-							<div className={`error-message help yellow ${contactFormStyles.feedback}`}>
-								{formik.touched.name && formik.errors.name && formik.errors.name}
+							<div
+								className={`error-message help yellow ${contactFormStyles.feedback}`}>
+								{formik.touched.name &&
+									formik.errors.name &&
+									formik.errors.name}
 							</div>
 						</div>
 						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
@@ -90,7 +98,11 @@ const ContactForm = () => {
 								id='email'
 								name='email'
 								type='email'
-								className={`form-control ${(formik.touched.email && formik.errors.email) && contactFormStyles.error}`}
+								className={`form-control ${
+									formik.touched.email &&
+									formik.errors.email &&
+									contactFormStyles.error
+								}`}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 								value={formik.values.email}
@@ -98,12 +110,14 @@ const ContactForm = () => {
 							<div
 								className={`error-message help yellow ${contactFormStyles.feedback}`}>
 								&nbsp;
-								{formik.touched.email && formik.errors.email && formik.errors.email}
+								{formik.touched.email &&
+									formik.errors.email &&
+									formik.errors.email}
 							</div>
 						</div>
 						<div className={`form-group ${contactFormStyles.customFormGroup}`}>
 							<div className={`field ${contactFormStyles.field}`}>
-								<label htmlFor="message">Message*</label>
+								<label htmlFor='message'>Message*</label>
 								<div className='control'>
 									<textarea
 										name='message'

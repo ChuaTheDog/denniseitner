@@ -5,6 +5,21 @@ import Home from '../../assets/svg/Home.svg';
 
 import * as navStyles from './nav.module.scss';
 
+export const LINKS = [
+    {
+        title: 'About',
+        to: '/about'
+    },
+    {
+        title: 'Friends',
+        to: '/friends'
+    },
+    {
+        title: 'Contact',
+        to: '/contact'
+    }
+]
+
 const Nav = () => {
 
 	const [ pos, setPos ] = useState('top');
@@ -17,20 +32,7 @@ const Nav = () => {
 
 	}, []);
 
-    const [ links ] = useState([
-        {
-            title: 'About',
-            to: '/about'
-        },
-        {
-            title: 'Friends',
-            to: '/friends'
-        },
-        {
-            title: 'Contact',
-            to: '/contact'
-        }
-    ]);
+    const [ links ] = useState(LINKS);
 
 	return (
 		<div className={navStyles.navWrapper} id='nav'>

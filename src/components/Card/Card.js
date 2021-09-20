@@ -26,11 +26,9 @@ const Card = ({ post }) => {
                 </Link>
             </div>
             <div className={cardStyles.cardContent}>
-                <div className={cardStyles.cardContent}>
-                    <h3>{post.frontmatter.title}</h3>
-                    <p>{post.excerpt.substr(0, MAXLENGTH)}</p>
-                    <Link to={`/blog/${post.frontmatter.slug}`}>read more</Link>
-                </div>
+                <h3>{post.frontmatter.title}</h3>
+                <p>{post.excerpt.substr(0, MAXLENGTH)}</p>
+                <Link to={`/blog/${post.frontmatter.slug}`}>read more</Link>
             </div>
         </div>
 	);

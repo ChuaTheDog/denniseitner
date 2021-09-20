@@ -91,6 +91,29 @@ h1 {
 	font-size: 3.242rem;
 	line-height: 3.77rem;
 	// margin-top: 3rem;
+
+    @include maxWidth(1200px) {
+        font-size: 3.1rem;
+    }
+
+    @include maxWidth(1198.98px) {
+        font-size: 3rem;
+    }
+
+    @include maxWidth(1024px) {
+        font-size: 2.9rem;
+    }
+
+    @include maxWidth(992px) {
+        font-size: 2.75rem;
+        line-height: 3rem;
+    }
+
+    @include maxWidth(576px) {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        word-break: break-all; // ?
+    }
 }
 h2 {
 	font-size: 2.828rem;

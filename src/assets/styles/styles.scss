@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import './mixins';
 @import './fonts.scss'; 
 // @import './reset.scss';
 // @import "../../../node_modules/bootstrap/scss/bootstrap.scss"; 
@@ -14,6 +15,7 @@
     display: block;
     margin: 0 auto;
     max-width: 1320px;
+    padding: 0 15px;
 }
 
 .container-fluid {
@@ -22,12 +24,6 @@
     // padding-left: var(--bs-gutter-x, 0.75rem);
     margin-right: auto;
     margin-left: auto;
-}
-
-.pagination {
-    display: flex;
-    padding-left: 0;
-    list-style: none;
 }
 
 .form-control {
@@ -50,4 +46,8 @@
 .img-fluid {
     max-width: 100%;
     height: auto;
+}
+
+iframe {
+    max-width: 100%;
 }

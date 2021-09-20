@@ -1,15 +1,30 @@
 .pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+
 	.page-item {
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
 		a.page-link {
+            display: block;
 			background-color: #ffc107;
 			border: 0;
 			color: white;
-			// width: 1.5rem;
-			border-radius: 100%;
-			height: 2.25rem;
-			width: 2.25rem;
-			text-align: center;
-			margin: 0.5rem;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            text-decoration: none;
 		}
+
 	}
 }

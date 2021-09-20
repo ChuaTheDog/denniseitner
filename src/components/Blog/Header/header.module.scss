@@ -1,4 +1,5 @@
 @import '../../../../node_modules/sass-mq/mq';
+@import '../../../assets/styles/mixins';  
 
 .header {
 	//   background-image: linear-gradient(180deg, #bf1a90 0%, #54135d 100%);
@@ -21,6 +22,11 @@
 	margin: 0 -15px;
 	position: relative;
 	overflow: hidden;
+
+    @include maxWidth(1024px) {
+        height: 400px;   
+    }
+
 	.overlay {
 		position: absolute;
 		min-width: 100vw;
@@ -54,4 +60,8 @@
     height: auto;
     max-height: 100vh;
     z-index: 99;
+
+    @include maxWidth(1024px) {
+        height: 100%;  
+    }
 }

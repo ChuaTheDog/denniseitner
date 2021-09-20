@@ -10,7 +10,7 @@ import * as headerStyles from './header.module.scss';
 
 const Header = () => {
 	return (
-		<div className={headerStyles.header}>
+		<div className={headerStyles.header}> 
 			<div className="container">
 				<div className={headerStyles.headerContainer}>
 					<div className={headerStyles.headerImage}>

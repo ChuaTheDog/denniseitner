@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+
+import { LINKS } from './Nav';
 
 const StyledMenu = styled.nav`
 	display: flex;
@@ -35,10 +38,11 @@ const MobileMenu = ({ active, open, ...props }) => {
 	const isHidden = open ? true : false;
 	return (
 		<StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-			<a href='/about'>About</a>
-			<a href='/friends'>Friends</a>
-
-			<a href='/contact'>Contact</a>
+            {LINKS.map(link => (
+                <Link key={link.title} to={link.to}>
+                    {link.title}
+                </Link>
+            ))}
 		</StyledMenu>
 	);
 };

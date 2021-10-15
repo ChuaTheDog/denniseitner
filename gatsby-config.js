@@ -7,7 +7,7 @@ module.exports = {
 		description: 'I haz website. Much wow.',
 	},
 	plugins: [
-        `gatsby-plugin-preload-fonts`,
+		`gatsby-plugin-preload-fonts`,
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
@@ -39,8 +39,8 @@ module.exports = {
 				],
 			},
 		},
-        'gatsby-plugin-image',
-        'gatsby-plugin-sharp',
+		'gatsby-plugin-image',
+		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -51,11 +51,11 @@ module.exports = {
 			},
 			__key: 'pages',
 		},
-        {
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: `images`,
-				path: `${__dirname}/static/img`
+				path: `${__dirname}/static/img`,
 			},
 			__key: 'pages',
 		},
@@ -75,5 +75,16 @@ module.exports = {
 		'gatsby-plugin-react-svg',
 		'gatsby-plugin-remove-serviceworker',
 		'gatsby-plugin-postcss',
+		{
+			resolve: `gatsby-plugin-gdpr-cookies`,
+			options: {
+				googleAnalytics: {
+					trackingId: 'UA-1176332-4', // leave empty if you want to disable the tracker
+					cookieName: 'gatsby-gdpr-google-analytics', // default
+					anonymize: true, // default
+					allowAdFeatures: false, // default
+				},
+			},
+		},
 	],
 };

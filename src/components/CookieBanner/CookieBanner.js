@@ -11,7 +11,7 @@ const CookieBanner = () => {
 			<CookieConsent
 				location='bottom'
 				buttonText='Sure man!!'
-				cookieName='myAwesomeCookieName2'
+				cookieName='gatsby-plugin-gdpr-cookies'
 				style={{ background: '#2B373B' }}
 				buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
 				expires={150}>

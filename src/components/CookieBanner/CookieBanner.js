@@ -9,14 +9,15 @@ const CookieBanner = () => {
 	return (
 		<div>
 			<CookieConsent
-				location='bottom'
-				buttonText='Sure man!!'
 				cookieName='gatsby-plugin-gdpr-cookies'
-				style={{ background: '#2B373B' }}
-				buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
-				expires={150}>
-				This website uses cookies to enhance the user experience.{' '}
-				<span style={{ fontSize: '10px' }}>This bit of text is smaller :O</span>
+				buttonId='confirm'
+				buttonText='Accept'
+				declineButtonId='decline'
+				declineButtonText='Decline'
+				enableDeclineButton={true}
+				disableStyles={true}
+				onAccept={() => initializeAndTrack(location)}>
+				<p className='cookieMessage'>This website uses cookies 🍪 </p>
 			</CookieConsent>
 		</div>
 	);

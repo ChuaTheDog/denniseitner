@@ -85,6 +85,7 @@ module.exports = {
 					allowAdFeatures: false, // default
 				},
 			},
+			environments: ['production', 'development'],
 		},
 	],
 };

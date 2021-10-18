@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { getImage } from "gatsby-plugin-image";
-
+import Layout from '../components/Layout/Layout';
 import Seo from '../components/SEO/SEO';
 import BlogHeader from '../components/Blog/Header/Header';
 import Content from '../components/Blog/Content/Content';
@@ -15,14 +15,14 @@ const Template = ({ data, pageContext }) => { // this prop will be injected by t
     const image = featuredImage && getImage(featuredImage);
 
 	return (
-		<div>
+		<Layout>
 			<Seo title={title} />
             <BlogHeader blogtitle={title} image={image} />
 			<div className='contentWrapper'>
 				<Content body={body} />
 				<ArticleFooter previous={previous} next={next} />
 			</div>
-		</div>
+		</Layout>
 	);
 }
 

@@ -2,12 +2,15 @@ import React from 'react';
 
 import Layout from '../components/Layout/Layout';
 import Seo from '../components/SEO/SEO';
+import Header from '../components/Header/Header';
+
 
 const AboutPage = () => {
 
     return (
         <Layout>
             <Seo title='About' />
+            <Header />
             <div className='contentWrapper'>
                 <div className='container'>
                     <h2>Hello World.</h2>

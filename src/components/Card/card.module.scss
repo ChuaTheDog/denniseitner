@@ -1,14 +1,14 @@
-@import '../../assets/styles/mixins'; 
+@import '../../assets/styles/mixins';
 
 .cardWrapper {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 5rem;
 
-    @include maxWidth(1024px) {
-        flex-direction: column;
-        margin-bottom: 3rem;
-    }
+	@include maxWidth(1024px) {
+		flex-direction: column;
+		margin-bottom: 3rem;
+	}
 
 	a {
 		text-decoration: none;
@@ -21,10 +21,10 @@
 		height: 190px;
 		//width: 250px;
 
-        @include maxWidth(1024px) {
-            height: 250px;
-            margin-bottom: 20px;
-        }
+		@include maxWidth(1024px) {
+			height: 250px;
+			margin-bottom: 20px;
+		}
 
 		.cardDate {
 			//	width: 250px;
@@ -70,31 +70,28 @@
 	.cardLink {
 		text-decoration: none;
 	}
-	h3 {
-		font-family: 'Roboto Black';
-	}
 }
 
 .cardImage {
-    width: 16.66667%;
+	width: 16.66667%;
 
-    @include maxWidth(1200px) {
-        width: 20%;
-    }
+	@include maxWidth(1200px) {
+		width: 20%;
+	}
 
-    @include maxWidth(1024px) {
-        width: 100%;
-    }
+	@include maxWidth(1024px) {
+		width: 100%;
+	}
 }
 
 .cardContent {
-    width: 83.33333%;
+	width: 83.33333%;
 
-    @include maxWidth(1200px) {
-        width: 80%;
-    }
+	@include maxWidth(1200px) {
+		width: 80%;
+	}
 
-    @include maxWidth(1024px) {
-        width: 100%;
-    }
+	@include maxWidth(1024px) {
+		width: 100%;
+	}
 }

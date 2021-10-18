@@ -24,9 +24,10 @@ export default function Layout({ children, withHeader = true }) {
 
 			<Nav />
 			<MobileNav />
+	
 			<Container fluid>
 				<main>
-					{withHeader && <Header />}
+				
 					{children}
 				</main>
 			</Container>

@@ -2,10 +2,12 @@ import React from 'react';
 
 import Layout from '../components/Layout/Layout';
 import Seo from '../components/SEO/SEO';
+import Header from '../components/Header/Header';
 
 const Friends = () => (
     <Layout>
         <Seo title='Friends' />
+       <Header />
         <div className='contentWrapper'>
             <div className='container' id='content'>
                 <div className='columns mt-6'>

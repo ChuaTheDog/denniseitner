@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { LINKS } from './Nav';
 
+const StyledMobileNavBackground = styled.div`
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background: #ffd400;
+	z-index: 1000;
+	transition: transform 0.3s ease-in-out;
+	overscroll-behavior: contain;
+
+	transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
+`;
 const StyledMenu = styled.nav`
+	height: 100vh;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: #ffd400;
-	transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
-	height: 100vh;
-	width: 100vw;
 	text-align: center;
-	padding: 2rem;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: transform 0.3s ease-in-out;
-	z-index: 500;
 	a {
 		font-size: 2rem;
 		text-transform: uppercase;
@@ -36,14 +44,25 @@ const StyledMenu = styled.nav`
 
 const MobileMenu = ({ active, open, ...props }) => {
 	const isHidden = open ? true : false;
+	console.log(isHidden);
+	useEffect(() => {
+		if (isHidden) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
+	}, [isHidden]);
+
 	return (
-		<StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-            {LINKS.map(link => (
-                <Link key={link.title} to={link.to}>
-                    {link.title}
-                </Link>
-            ))}
-		</StyledMenu>
+		<StyledMobileNavBackground open={open} aria-hidden={!isHidden} {...props}>
+			<StyledMenu>
+				{LINKS.map((link) => (
+					<Link key={link.title} to={link.to}>
+						{link.title}
+					</Link>
+				))}
+			</StyledMenu>
+		</StyledMobileNavBackground>
 	);
 };
 

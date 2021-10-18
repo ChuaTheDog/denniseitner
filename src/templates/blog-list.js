@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import Seo from '../components/SEO/SEO';
-
+import Header from '../components/Header/Header';
 import PostCard from '../components/Card/Card';
 
 const PaginationItem = ({ children, to }) => (
@@ -28,6 +28,7 @@ const blogList = (data) => {
 	return (
 		<Layout>
             <Seo title='Blog' />
+			<Header />
 			<div className='contentWrapper'>
 				<div className="container">
                     <div className='pt-3'>{Posts}</div>

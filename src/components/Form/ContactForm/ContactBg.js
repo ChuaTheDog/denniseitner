@@ -22,6 +22,7 @@ const StyledBg = styled.div`
 	right: 0;
 	width: 100vw;
 	height: 100vh;
+	z-index: -1;
 	.backgroundImage {
 		opacity: 0.15;
 		display: block;
@@ -33,14 +34,13 @@ const StyledBg = styled.div`
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 1;
 	}
 `;
 
 const ContactBg = () => {
 	const imgQuery = useStaticQuery(query);
 	const image = getImage(imgQuery.file);
-	console.log(image);
+
 	return (
 		<StyledBg>
 			<GatsbyImage

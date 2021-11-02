@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Container } from 'react-bootstrap';
 
@@ -10,10 +10,32 @@ import ScrollButton from '../ScrollButton/ScrollButton';
 import '../../assets/styles/styles.scss';
 
 export default function Layout({ children, withHeader = true }) {
+
+    const [ isOpen, setOpen ] = useState(false);
+
+    const disableScroll = () => {
+        // Get the current page scroll position
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+    }
+      
+    const enableScroll = () => {
+        window.onscroll = function() {};
+    }
+
+    useEffect(() => {
+        isOpen ? disableScroll() : enableScroll(); 
+    }, [ isOpen ]);
+
 	return (
-		<>
+		<div className="layout">
 			<Nav />
-			<MobileNav />
+			<MobileNav isOpen={isOpen} setOpen={() => setOpen(!isOpen)} />
 			<Container fluid>
                 <main>
                     {withHeader && <Header />}
@@ -21,6 +43,6 @@ export default function Layout({ children, withHeader = true }) {
                 </main>
             </Container>
 			<ScrollButton />
-		</>
+		</div>
 	);
 }

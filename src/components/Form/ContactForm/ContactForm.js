@@ -7,7 +7,7 @@ TODO:
 
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import * as contactFormStyles from './contactForm.module.scss';
+
 import * as Yup from 'yup';
 
 import Button from '../../Button/Button';
@@ -58,17 +58,17 @@ const ContactForm = () => {
 	return (
         <div>
             {formSuccess ? (
-                <p className={`${contactFormStyles.confirmation}`}>
+                <p className="contact__confirmation">
                     Thank you, <span>{formik.values.name}</span>. I'll do my best to answer as quick as I can.
                 </p>
             ) : (
-                <form onSubmit={formik.handleSubmit}>
-                    <p className={`${contactFormStyles.hidden}`}>
+                <form onSubmit={formik.handleSubmit} className="contact__form">
+                    <p className="contact__hidden">
                         <label>
                             Don’t fill this out if you’re human: <input name='bot-field' />
                         </label>
                     </p>
-                    <div className={`form-group ${contactFormStyles.customFormGroup}`}>
+                    <div className="form-group contact__formGroup">
                         <label htmlFor="name">Name:</label>
                         <input
                             id='name'
@@ -77,31 +77,31 @@ const ContactForm = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.name}
-                            className={`form-control ${(formik.touched.email && formik.errors.email) ? contactFormStyles.error : ''}`}
+                            className={`form-control ${(formik.touched.email && formik.errors.email) ? "contact__error" : ''}`}
                         />
-                        <div className={`error-message help yellow ${contactFormStyles.feedback}`}>
+                        <div className="error-message help yellow contact__feedback">
                             {formik.touched.name && formik.errors.name && formik.errors.name}
                         </div>
                     </div>
-                    <div className={`form-group ${contactFormStyles.customFormGroup}`}>
+                    <div className="form-group contact__formGroup">
                         <label htmlFor='email'>Email*</label>
                         <input
                             id='email'
                             name='email'
                             type='email'
-                            className={`form-control ${(formik.touched.email && formik.errors.email) && contactFormStyles.error}`}
+                            className={`form-control ${(formik.touched.email && formik.errors.email) && "contact__error"}`}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.email}
                         />
                         <div
-                            className={`error-message help yellow ${contactFormStyles.feedback}`}>
+                            className="error-message help yellow contact__feedback">
                             &nbsp;
                             {formik.touched.email && formik.errors.email && formik.errors.email}
                         </div>
                     </div>
-                    <div className={`form-group ${contactFormStyles.customFormGroup}`}>
-                        <div className={`field ${contactFormStyles.field}`}>
+                    <div className="form-group contact__formGroup">
+                        <div className="field contact__field">
                             <label htmlFor="message">Message*</label>
                             <div className='control'>
                                 <textarea
@@ -117,7 +117,7 @@ const ContactForm = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`field ${contactFormStyles.buttonMargin}`}>
+                    <div className="field contact__buttonMargin">
                         {loading ? (
                             <ReactLoading
                                 type={'bubbles'}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import * as sidebarStyles from './sidebar.module.scss';
 
 const styles = {
 	bmBurgerButton: {
@@ -36,7 +35,7 @@ const styles = {
 
 const Sidebar = (props) => {
 	return (
-		<Menu styles={styles} className={sidebarStyles.sidebar}>
+		<Menu styles={styles} className="sidebar">
 			<a className='menu-item' href='/'>
 				Home
 			</a>

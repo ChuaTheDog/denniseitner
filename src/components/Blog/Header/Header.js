@@ -1,17 +1,14 @@
 import React from 'react';
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import * as HeaderStyle from './header.module.scss';
-
-const Header = ({ blogtitle, image }) => {
-
-	return (
-		<div className={HeaderStyle.header}>
-            <GatsbyImage image={image} className={HeaderStyle.Image} />
-			<div className={HeaderStyle.overlay} />
-			<h1>{blogtitle}</h1>
-		</div>
-	);
-};
+const Header = ({ blogtitle, image }) => (
+    <div className="footer__header">
+        <GatsbyImage image={image} className="footer__header--image" />
+        <div className="footer__header--overlay" />
+        <h1 className="footer__header--heading">
+            {blogtitle}
+        </h1>
+    </div>
+)
 
 export default Header;

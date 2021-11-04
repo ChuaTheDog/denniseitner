@@ -7,7 +7,7 @@ TODO:
 
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import * as contactFormStyles from './contactForm.module.scss';
+
 import * as Yup from 'yup';
 
 import Button from '../../Button/Button';

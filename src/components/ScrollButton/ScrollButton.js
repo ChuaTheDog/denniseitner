@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
-import * as scrollButtonStyles from './scrollButton.module.scss';
 
 const ScrollButton = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +7,6 @@ const ScrollButton = () => {
 	// Top: 0 takes us all the way back to the top of the page
 	// Behavior: smooth keeps it smooth!
 	const scrollToTop = () => {
-		console.log('scroll');
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
@@ -29,18 +27,13 @@ const ScrollButton = () => {
 
 		return () => window.removeEventListener('scroll', toggleVisibility);
 	}, []);
+    
 	return (
-		<div>
-			<div className='scroll-to-top'>
-				{isVisible && (
-					<button
-						className={scrollButtonStyles.scrollButton}
-						onClick={scrollToTop}>
-						<FaArrowCircleUp className={scrollButtonStyles.upIcon} />
-					</button>
-				)}
-			</div>
-		</div>
+		<div className={`scroll ${isVisible ? 'scroll__visible' : ''}`}>
+            <button className="scroll__btn" onClick={scrollToTop}>
+                <FaArrowCircleUp className="scroll__icon" />
+            </button>
+        </div>
 	);
 };
 

@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 
 import Home from '../../assets/svg/Home.svg';
 
-import * as navStyles from './nav.module.scss';
-
 export const LINKS = [
 	{
 		title: 'About',
@@ -37,18 +35,18 @@ const Nav = () => {
 	const [links] = useState(LINKS);
 
 	return (
-		<div className={navStyles.navWrapper} id='nav'>
-			<Link to='/' className={navStyles.homeLink}>
-				<Home className={navStyles.home} />
+		<div className='navigation__wrapper' id='nav'>
+			<Link to='/' className='navigation__home--link'>
+				<Home className='navigation__home' />
 			</Link>
 			<nav
-				className={navStyles.nav}
+				className='navigation'
 				style={{
 					backgroundColor:
 						pos === 'top' ? 'rgba(0, 0, 0, 0)' : 'rgba(0, 0, 0, .5)',
 				}}>
 				{links.map((link) => (
-					<Link key={link.title} className={navStyles.navItem} to={link.to}>
+					<Link key={link.title} className='navigation__link' to={link.to}>
 						{link.title}
 					</Link>
 				))}

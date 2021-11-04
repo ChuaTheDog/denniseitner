@@ -48,8 +48,10 @@ const MobileMenu = ({ active, open, ...props }) => {
 	useEffect(() => {
 		if (isHidden) {
 			document.body.style.overflow = 'hidden';
+			document.body.style.position = 'fixed';
+			document.body.style.height = '100%';
 		} else {
-			document.body.style.overflow = 'unset';
+			document.body.style = '';
 		}
 	}, [isHidden]);
 

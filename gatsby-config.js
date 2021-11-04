@@ -10,9 +10,10 @@ module.exports = {
 		`gatsby-plugin-preload-fonts`,
 		{
 			resolve: `gatsby-plugin-sass`,
-			options: {
+			/*	options: {
 				implementation: require('node-sass'),
 			},
+		*/
 		},
 		'gatsby-plugin-styled-components',
 		'gatsby-plugin-sharp',

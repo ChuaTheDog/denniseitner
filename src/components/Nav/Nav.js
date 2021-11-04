@@ -26,9 +26,9 @@ const Nav = () => {
 	const [pos, setPos] = useState('top');
 
 	useEffect(() => {
-		document.addEventListener('scroll', (e) => {
+		document.addEventListener('scroll', () => {
 			const scrolled = document.scrollingElement.scrollTop;
-			setPos(scrolled >= 400 ? 'moved' : 'top');
+			setPos(scrolled >= 200 ? 'moved' : 'top');
 		});
 	}, []);
 
@@ -39,7 +39,6 @@ const Nav = () => {
 			<Link to='/' className='homeLink'>
 				<Home className='home' />
 			</Link>
-
 			<div className='' id='nav'>
 				<nav
 					className='navigation'

@@ -39,13 +39,11 @@
 
 	&__link {
 		text-align: center;
-		flex-grow: 1;
 		position: relative;
 		//border-right: 1px #000 solid;
 		text-decoration: none;
 		position: relative;
-		max-width: 120px;
-
+		margin: 0 1rem;
 		&:hover {
 			color: white;
 		}

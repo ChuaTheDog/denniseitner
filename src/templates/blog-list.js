@@ -7,18 +7,19 @@ import Header from '../components/Header/Header';
 import PostCard from '../components/Card/Card';
 
 const PaginationItem = ({ children, to }) => (
-    <li className="page-item">
-        <Link className="page-link" to={to}>
-            <span>{children}</span>
-        </Link>
-    </li>
-)
+	<li className='page-item'>
+		<Link className='page-link' to={to}>
+			<span>{children}</span>
+		</Link>
+	</li>
+);
 
 const blogList = (data) => {
 	const { currentPage, numPages } = data.pageContext;
 	const isFirst = currentPage === 1;
 	const isLast = currentPage === numPages;
-	const prevPage = currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString();
+	const prevPage =
+		currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString();
 	const nextPage = (currentPage + 1).toString();
 	const { edges } = data.data.allMdx;
 	const Posts = edges
@@ -27,20 +28,28 @@ const blogList = (data) => {
 
 	return (
 		<Layout>
-            <Seo title='Blog' />
+			<Seo title='Blog' />
 			<Header />
 			<div className='contentWrapper'>
-				<div className="container">
-                    <div className='pt-3'>{Posts}</div>
-                        <ul class="pagination">
-                            {!isFirst && <PaginationItem to={prevPage}><span>←</span></PaginationItem>}
-                            {Array.from({ length: numPages }, (_, i) => (
-                                <PaginationItem key={i} to={`/blog/${i === 0 ? '' : i + 1}`}>
-                                    <span>{i + 1}</span>
-                                </PaginationItem>
-                            ))}
-                            {!isLast && <PaginationItem to={`/blog/${nextPage}`}><span>→</span></PaginationItem>}
-                        </ul>
+				<div className='container'>
+					<div className='pt-3'>{Posts}</div>
+					<ul className='pagination'>
+						{!isFirst && (
+							<PaginationItem to={prevPage}>
+								<span>←</span>
+							</PaginationItem>
+						)}
+						{Array.from({ length: numPages }, (_, i) => (
+							<PaginationItem key={i} to={`/blog/${i === 0 ? '' : i + 1}`}>
+								<span>{i + 1}</span>
+							</PaginationItem>
+						))}
+						{!isLast && (
+							<PaginationItem to={`/blog/${nextPage}`}>
+								<span>→</span>
+							</PaginationItem>
+						)}
+					</ul>
 				</div>
 			</div>
 		</Layout>

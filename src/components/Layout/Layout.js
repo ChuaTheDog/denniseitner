@@ -44,8 +44,7 @@ export default function Layout({ children, withHeader = true }) {
 				This site uses cookies ...
 			</CookieConsent>
 
-			<Nav />
-			<MobileNav />
+			
 	
 		<div className="layout">
 			<Nav />
@@ -58,5 +57,6 @@ export default function Layout({ children, withHeader = true }) {
 			</Container>
 			<ScrollButton />
 		</div>
+		</>
 	);
 }

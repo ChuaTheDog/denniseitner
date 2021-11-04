@@ -19,6 +19,7 @@ a {
 	//   font-family: "Montserrat";
 	&:hover {
 		color: #bf1a90;
+		cursor: pointer;
 	}
 }
 a:active,
@@ -42,7 +43,7 @@ h1.intro {
 /* Setup */
 html {
 	/* Change default typefaces here */
-	font-family: 'Montserrat';
+	font-family: 'Georgia';
 	font-size: 137.5%;
 	-webkit-font-smoothing: antialiased;
 }
@@ -147,11 +148,4 @@ table th {
 code {
 	vertical-align: bottom;
 }
-/* Leading paragraph text */
-.lead {
-	font-size: 1.414rem;
-}
-/* Hug the block above you */
-.hug {
-	margin-top: 0;
-}
+

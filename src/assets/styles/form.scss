@@ -1,4 +1,9 @@
-.form-control{
-    border-radius: 1rem;
-    background-color: alpha($color: #ffffff);
+.form-control {
+	border-radius: 1rem;
+	background-color: alpha($color: #ffffff);
+}
+
+textarea {
+	font-family: inherit;
+	font-size: inherit;
 }

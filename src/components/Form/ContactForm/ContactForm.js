@@ -16,8 +16,8 @@ import ReactLoading from 'react-loading';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ContactForm = () => {
-	const [ formSuccess, setformSuccess ] = useState(false);
-	const [ loading, setLoading ] = useState(false);
+	const [formSuccess, setformSuccess] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -56,82 +56,91 @@ const ContactForm = () => {
 	});
 
 	return (
-        <div>
-            {formSuccess ? (
-                <p className="contact__confirmation">
-                    Thank you, <span>{formik.values.name}</span>. I'll do my best to answer as quick as I can.
-                </p>
-            ) : (
-                <form onSubmit={formik.handleSubmit} className="contact__form">
-                    <p className="contact__hidden">
-                        <label>
-                            Don’t fill this out if you’re human: <input name='bot-field' />
-                        </label>
-                    </p>
-                    <div className="form-group contact__formGroup">
-                        <label htmlFor="name">Name:</label>
-                        <input
-                            id='name'
-                            name='name'
-                            type='text'
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.name}
-                            className={`form-control ${(formik.touched.email && formik.errors.email) ? "contact__error" : ''}`}
-                        />
-                        <div className="error-message help yellow contact__feedback">
-                            {formik.touched.name && formik.errors.name && formik.errors.name}
-                        </div>
-                    </div>
-                    <div className="form-group contact__formGroup">
-                        <label htmlFor='email'>Email*</label>
-                        <input
-                            id='email'
-                            name='email'
-                            type='email'
-                            className={`form-control ${(formik.touched.email && formik.errors.email) && "contact__error"}`}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.email}
-                        />
-                        <div
-                            className="error-message help yellow contact__feedback">
-                            &nbsp;
-                            {formik.touched.email && formik.errors.email && formik.errors.email}
-                        </div>
-                    </div>
-                    <div className="form-group contact__formGroup">
-                        <div className="field contact__field">
-                            <label htmlFor="message">Message*</label>
-                            <div className='control'>
-                                <textarea
-                                    name='message'
-                                    id='message'
-                                    cols='30'
-                                    rows='10'
-                                    className='form-control'
-                                    //className={`textarea is-rounded ${contactFormStyles.textarea}`}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.message}></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="field contact__buttonMargin">
-                        {loading ? (
-                            <ReactLoading
-                                type={'bubbles'}
-                                color={'#fff'}
-                                height={50}
-                                width={50}
-                            />
-                        ) : (
-                            <Button type='submit' buttonText='Send' />
-                        )}
-                    </div>
-                </form>
-            )}
-        </div>
+		<div>
+			{formSuccess ? (
+				<p className='contact__confirmation'>
+					Thank you, <span>{formik.values.name}</span>. I'll do my best to
+					answer as quick as I can.
+				</p>
+			) : (
+				<form onSubmit={formik.handleSubmit} className='contact__form'>
+					<p className='contact__hidden'>
+						<label>
+							Don’t fill this out if you’re human: <input name='bot-field' />
+						</label>
+					</p>
+					<div className='form-group contact__formGroup'>
+						<label htmlFor='name'>Name:</label>
+						<input
+							id='name'
+							name='name'
+							type='text'
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+							value={formik.values.name}
+							className={`form-control ${
+								formik.touched.email && formik.errors.email
+									? 'contact__error'
+									: ''
+							}`}
+						/>
+						<div className='error-message help yellow contact__feedback'>
+							{formik.touched.name && formik.errors.name && formik.errors.name}
+						</div>
+					</div>
+					<div className='form-group contact__formGroup'>
+						<label htmlFor='email'>Email*</label>
+						<input
+							id='email'
+							name='email'
+							type='email'
+							className={`form-control ${
+								formik.touched.email && formik.errors.email && 'contact__error'
+							}`}
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+							value={formik.values.email}
+						/>
+						<div className='error-message help yellow contact__feedback'>
+							&nbsp;
+							{formik.touched.email &&
+								formik.errors.email &&
+								formik.errors.email}
+						</div>
+					</div>
+					<div className='form-group contact__formGroup'>
+						<div className='field contact__field'>
+							<label htmlFor='message'>Message*</label>
+							<div className='control'>
+								<textarea
+									name='message'
+									id='message'
+									cols='30'
+									rows='10'
+									className='form-control'
+									//className={`textarea is-rounded ${contactFormStyles.textarea}`}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+									value={formik.values.message}></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div className='field contact__buttonMargin'>
+						{loading ? (
+							<ReactLoading
+								type={'bubbles'}
+								color={'#fff'}
+								height={50}
+								width={50}
+							/>
+						) : (
+							<Button type='submit' buttonText='Send' className='button' />
+						)}
+					</div>
+				</form>
+			)}
+		</div>
 	);
 };
 

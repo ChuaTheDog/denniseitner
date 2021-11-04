@@ -11,16 +11,6 @@
 }
 
 .navigation {
-	&__wrapper {
-		width: 100vw;
-		max-width: 50vw;
-		line-height: 2rem;
-		margin-left: auto;
-		position: fixed;
-		top: 0;
-		z-index: 999;
-	}
-
 	margin: 0px 0px 0px auto;
 	padding: 0px 0.5rem 0px 0px;
 	list-style: none;
@@ -70,6 +60,10 @@
 	position: fixed;
 	top: 0.5rem;
 	left: 0.5rem;
-	height: 1.25rem;
+	height: 1rem;
 	z-index: 9999;
+	svg {
+		height: 1rem;
+		width: 2rem;
+	}
 }

@@ -40,7 +40,7 @@ const Nav = () => {
 				<Home className='home' />
 			</Link>
 
-			<div className='navigation__wrapper' id='nav'>
+			<div className='' id='nav'>
 				<nav
 					className='navigation'
 					style={{

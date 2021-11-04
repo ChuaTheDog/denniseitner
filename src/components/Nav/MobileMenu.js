@@ -22,7 +22,7 @@ const StyledMobileNavBackground = styled.div`
 `;
 const StyledMenu = styled.nav`
 	height: 100vh;
-
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -50,7 +50,6 @@ const StyledMenu = styled.nav`
 
 const MobileMenu = ({ active, open, ...props }) => {
 	const isHidden = open ? true : false;
-	console.log(isHidden);
 	useEffect(() => {
 		if (isHidden) {
 			document.body.style.overflow = 'hidden';

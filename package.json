@@ -11,7 +11,7 @@
 		"preload-fonts": "gatsby-preload-fonts",
 		"develop": "gatsby develop",
 		"start": "gatsby develop",
-		"build": "npm rebuild && gatsby build",
+		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean"
 	},

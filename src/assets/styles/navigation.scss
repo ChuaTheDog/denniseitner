@@ -1,41 +1,40 @@
 .hamburger {
-    position: fixed;
-    top: 0rem;
-    right: 0.5rem;
-    z-index: 9999;
-    display: none;
+	position: fixed;
+	top: 0rem;
+	right: 0.5rem;
+	z-index: 9999;
+	display: none;
 
-    @include maxWidth(768px) {
-        display: block;
-    }
+	@include maxWidth(768px) {
+		display: block;
+	}
 }
 
 .navigation {
-    
-    &__wrapper {
-        width: 100vw;
-        max-width: 50vw;
-        line-height: 2rem;
-        margin-left: auto;
-        position: fixed;
-        top: 0;
-        z-index: 999;
-    }
+	&__wrapper {
+		width: 100vw;
+		max-width: 50vw;
+		line-height: 2rem;
+		margin-left: auto;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
 
-    margin: 0px 0px 0px auto;
-    padding: 0px 0.5rem 0px 0px;
-    list-style: none;
-    display: flex;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    width: 100vw;
-    line-height: 2rem;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 999;
+	margin: 0px 0px 0px auto;
+	padding: 0px 0.5rem 0px 0px;
+	list-style: none;
+	display: flex;
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+	width: 100vw;
+	line-height: 2rem;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
 
-    @include maxWidth(768px) {
+	@include maxWidth(768px) {
 		margin: 0;
 		padding: 0 1rem;
 		list-style: none;
@@ -48,49 +47,29 @@
 		background-size: cover;
 	}
 
-    &__home {
-        position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
-        height: 1.25rem;
-        
-        &--link {
-            position: relative;
-            z-index: 1000;
-        }
-    }
+	&__link {
+		text-align: center;
+		flex-grow: 1;
+		position: relative;
+		//border-right: 1px #000 solid;
+		text-decoration: none;
+		position: relative;
+		max-width: 120px;
 
-    &__link {
-        text-align: center;
-        flex-grow: 1;
-        position: relative;
-        //border-right: 1px #000 solid;
-        text-decoration: none;
-        position: relative;
-        max-width: 120px;
+		&:hover {
+			color: white;
+		}
 
-        &:hover {
-            color: white;
-        }
+		@include maxWidth(768px) {
+			display: none;
+		}
+	}
+}
 
-        &:not(:last-child) {
-            &::after {
-                //	padding: 0 1rem;
-                position: absolute;
-                top: 50%;
-                bottom: 50%;
-                right: 0;
-                content: '';
-                width: 5px;
-                height: 5px;
-                border-radius: 5px;
-                background-color: #ffd400;
-            }
-        }
-
-        @include maxWidth(768px) {
-            display: none;
-        }
-    }
-
+.homeLink {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	height: 1.25rem;
+	z-index: 9999;
 }
